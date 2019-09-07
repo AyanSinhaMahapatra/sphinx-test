@@ -8,4 +8,4 @@ Welcome to Sphinx-Test. This is to test branching/tagging for a multi-version do
    :caption: Contents:
 
    how-to/how_to_run_a_scan
-
+   how-to/how_to_format_scan_output
