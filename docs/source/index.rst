@@ -1,11 +1,12 @@
 Welcome to Sphinx-Test's documentation!
 ===========================================
 
-Welcome to Sphinx-Test. This is to test branching/tagging for a multi-version documentation, and come up with solutions. 
+Welcome to Sphinx-Test. This is to test branching/tagging for a multi-version documentation, and come up with solutions. Also testing branch handling by non-admin users.  
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
    how-to/how_to_run_a_scan
+   how-to/how_to_set_what_will_be_detected_in_a_scan.rst
 
