@@ -1,8 +1,0 @@
-**Scancode-Toolkit Documentation**
-==================================
-
-.. toctree::
-   :maxdepth: 2
-
-   getting_started/index
-   doc_maintenance.rst
