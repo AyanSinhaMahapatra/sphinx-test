@@ -1,0 +1,530 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Deltacode Output: Format, Fields and Structure &mdash; sphinx-test-1.0 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Deltacode Scoring" href="deltacode_scoring.html" />
+    <link rel="prev" title="Comprehensive Installation" href="comprehensive_installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> sphinx-test-1.0
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../scancode-workbench/index.html"><strong>Scancode-Workbench Documentation</strong></a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html"><strong>Deltacode Documentation</strong></a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="comprehensive_installation.html">Comprehensive Installation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Deltacode Output: Format, Fields and Structure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#output-formats">Output Formats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#overall-structure">Overall Structure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#json">JSON</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#csv">CSV</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="deltacode_scoring.html">Deltacode Scoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development.html">Development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="json_to_csv.html">JSON to CSV Conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_process.html">Release Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gsoc19_final_report.html">Google Summer of Code 2019 - Final report</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../aboutcode-docs/home.html">AboutCode Docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aboutcode-toolkit/index.html"><strong>AboutCode-Toolkit Documentation</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aboutcode-data/abcd.html">AboutCode Data : ABCD</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc_maintenance.html">Document Maintenance</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">sphinx-test-1.0</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html"><strong>Deltacode Documentation</strong></a> &raquo;</li>
+        
+      <li>Deltacode Output: Format, Fields and Structure</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/deltacode/deltacode_output.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="deltacode-output-format-fields-and-structure">
+<h1>Deltacode Output: Format, Fields and Structure<a class="headerlink" href="#deltacode-output-format-fields-and-structure" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Usage</span><span class="p">:</span> <span class="n">deltacode</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span>
+
+  <span class="n">Identify</span> <span class="n">the</span> <span class="n">changes</span> <span class="n">that</span> <span class="n">need</span> <span class="n">to</span> <span class="n">be</span> <span class="n">made</span> <span class="n">to</span> <span class="n">the</span> <span class="s1">&#39;old&#39;</span> <span class="n">scan</span> <span class="n">file</span> <span class="p">(</span><span class="o">-</span><span class="n">o</span> <span class="ow">or</span> <span class="o">--</span><span class="n">old</span><span class="p">)</span>
+  <span class="ow">in</span> <span class="n">order</span> <span class="n">to</span> <span class="n">generate</span> <span class="n">the</span> <span class="s1">&#39;new&#39;</span> <span class="n">scan</span> <span class="n">file</span> <span class="p">(</span><span class="o">-</span><span class="n">n</span> <span class="ow">or</span> <span class="o">--</span><span class="n">new</span><span class="p">)</span><span class="o">.</span>  <span class="n">Write</span> <span class="n">the</span> <span class="n">results</span> <span class="n">to</span>
+  <span class="n">a</span> <span class="o">.</span><span class="n">json</span> <span class="n">file</span> <span class="p">(</span><span class="o">-</span><span class="n">j</span> <span class="ow">or</span> <span class="o">--</span><span class="n">json</span><span class="o">-</span><span class="n">file</span><span class="p">)</span> <span class="n">at</span> <span class="n">a</span> <span class="n">user</span><span class="o">-</span><span class="n">designated</span> <span class="n">location</span><span class="o">.</span>  <span class="n">If</span> <span class="n">no</span> <span class="n">file</span>
+  <span class="n">option</span> <span class="ow">is</span> <span class="n">selected</span><span class="p">,</span> <span class="nb">print</span> <span class="n">the</span> <span class="n">JSON</span> <span class="n">results</span> <span class="n">to</span> <span class="n">the</span> <span class="n">console</span><span class="o">.</span>
+
+<span class="n">Options</span><span class="p">:</span>
+  <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>                <span class="n">Show</span> <span class="n">this</span> <span class="n">message</span> <span class="ow">and</span> <span class="n">exit</span><span class="o">.</span>
+  <span class="o">--</span><span class="n">version</span>                 <span class="n">Show</span> <span class="n">the</span> <span class="n">version</span> <span class="ow">and</span> <span class="n">exit</span><span class="o">.</span>
+  <span class="o">-</span><span class="n">n</span><span class="p">,</span> <span class="o">--</span><span class="n">new</span> <span class="n">PATH</span>            <span class="n">Identify</span> <span class="n">the</span> <span class="n">path</span> <span class="n">to</span> <span class="n">the</span> <span class="s2">&quot;new&quot;</span> <span class="n">scan</span> <span class="n">file</span> <span class="p">[</span><span class="n">required</span><span class="p">]</span>
+  <span class="o">-</span><span class="n">o</span><span class="p">,</span> <span class="o">--</span><span class="n">old</span> <span class="n">PATH</span>            <span class="n">Identify</span> <span class="n">the</span> <span class="n">path</span> <span class="n">to</span> <span class="n">the</span> <span class="s2">&quot;old&quot;</span> <span class="n">scan</span> <span class="n">file</span> <span class="p">[</span><span class="n">required</span><span class="p">]</span>
+  <span class="o">-</span><span class="n">j</span><span class="p">,</span> <span class="o">--</span><span class="n">json</span><span class="o">-</span><span class="n">file</span> <span class="n">FILENAME</span>  <span class="n">Identify</span> <span class="n">the</span> <span class="n">path</span> <span class="n">to</span> <span class="n">the</span> <span class="o">.</span><span class="n">json</span> <span class="n">output</span> <span class="n">file</span>
+  <span class="o">-</span><span class="n">a</span><span class="p">,</span> <span class="o">--</span><span class="nb">all</span><span class="o">-</span><span class="n">delta</span><span class="o">-</span><span class="n">types</span>     <span class="n">Include</span> <span class="n">unmodified</span> <span class="n">files</span> <span class="k">as</span> <span class="n">well</span> <span class="k">as</span> <span class="nb">all</span> <span class="n">changed</span>
+                            <span class="n">files</span> <span class="ow">in</span> <span class="n">the</span> <span class="o">.</span><span class="n">json</span> <span class="n">output</span><span class="o">.</span>  <span class="n">If</span> <span class="ow">not</span> <span class="n">selected</span><span class="p">,</span> <span class="n">only</span>
+                            <span class="n">changed</span> <span class="n">files</span> <span class="n">are</span> <span class="n">included</span><span class="o">.</span>
+</pre></div>
+</div>
+<div class="section" id="output-formats">
+<h2>Output Formats<a class="headerlink" href="#output-formats" title="Permalink to this headline">¶</a></h2>
+<p>DeltaCode provides two output formats for the results of a DeltaCode codebase comparison: <code class="docutils literal notranslate"><span class="pre">JSON</span></code>
+and <code class="docutils literal notranslate"><span class="pre">CSV</span></code>.</p>
+<p>The default output format is <code class="docutils literal notranslate"><span class="pre">JSON</span></code>. If the command-line input does not include an output flag
+(<code class="docutils literal notranslate"><span class="pre">-j</span></code> or <code class="docutils literal notranslate"><span class="pre">--json-file</span></code>) and the path to the output file, the results of the DeltaCode
+comparison will be displayed in the console in <code class="docutils literal notranslate"><span class="pre">JSON</span></code> format. Alternatively, the results will be
+saved to a <code class="docutils literal notranslate"><span class="pre">.json</span></code> file if the user includes the <code class="docutils literal notranslate"><span class="pre">-j</span></code> or <code class="docutils literal notranslate"><span class="pre">--json-file</span></code> flag and the output
+file’s path, e.g.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">deltacode</span> <span class="o">-</span><span class="n">n</span> <span class="p">[</span><span class="n">path</span> <span class="n">to</span> <span class="n">the</span> <span class="s1">&#39;new&#39;</span> <span class="n">codebase</span><span class="p">]</span> <span class="o">-</span><span class="n">o</span> <span class="p">[</span><span class="n">path</span> <span class="n">to</span> <span class="n">the</span> <span class="s1">&#39;old&#39;</span> <span class="n">codebase</span><span class="p">]</span> <span class="o">-</span><span class="n">j</span> <span class="p">[</span><span class="n">path</span> <span class="n">to</span> <span class="n">the</span> <span class="n">JSON</span> <span class="n">output</span> <span class="n">file</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Once a user has generated a DeltaCode JSON output file, he or she can convert that <code class="docutils literal notranslate"><span class="pre">JSON</span></code> output
+to <code class="docutils literal notranslate"><span class="pre">CSV</span></code> format by running a command with this structure::</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">etc</span><span class="o">/</span><span class="n">scripts</span><span class="o">/</span><span class="n">json2csv</span><span class="o">.</span><span class="n">py</span> <span class="p">[</span><span class="n">path</span> <span class="n">to</span> <span class="n">the</span> <span class="n">JSON</span> <span class="nb">input</span> <span class="n">file</span><span class="p">]</span> <span class="p">[</span><span class="n">path</span> <span class="n">to</span> <span class="n">the</span> <span class="n">CSV</span> <span class="n">output</span> <span class="n">file</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>See also <a class="reference internal" href="json_to_csv.html#json-to-csv"><span class="std std-ref">JSON to CSV Conversion</span></a>.</p>
+</div>
+<div class="section" id="overall-structure">
+<h2>Overall Structure<a class="headerlink" href="#overall-structure" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="json">
+<h3>JSON<a class="headerlink" href="#json" title="Permalink to this headline">¶</a></h3>
+<p><strong>Top-Level JSON</strong></p>
+<p>DeltaCode’s <code class="docutils literal notranslate"><span class="pre">JSON</span></code> output comprises the following six fields/keys and values at the top level:</p>
+<ol class="arabic">
+<li><p><code class="docutils literal notranslate"><span class="pre">deltacode_notice</span></code> – A string of the terms under which the DeltaCode output is provided.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deltacode_options</span></code> – A JSON object containing three key/value pairs:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--new</span></code> – A string identifying the path to the <code class="docutils literal notranslate"><span class="pre">JSON</span></code> file containing the ScanCode
+output of the codebase the user wants DeltaCode to treat as the ‘new’ codebase.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--old</span></code> – A string identifying the path to the JSON file containing the ScanCode output of
+the codebase the user wants DeltaCode to treat as the ‘old’ codebase.</p></li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">--all-delta-types</span></code> – A <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code> value.</dt><dd><ul>
+<li><p>This value will be true if the command-line input includes the <code class="docutils literal notranslate"><span class="pre">-a</span></code> or
+<code class="docutils literal notranslate"><span class="pre">--all-delta-types</span></code> flag, in which case the deltas field described below will include
+details for unmodified files as well as all changed files.</p></li>
+<li><p>If the user does not include the <code class="docutils literal notranslate"><span class="pre">-a</span></code> or <code class="docutils literal notranslate"><span class="pre">--all-delta-types</span></code> flag, the value will be
+false and unmodified files will be omitted from the DeltaCode output.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deltacode_version</span></code> – A string representing the version of DeltaCode on which the codebase
+comparison was run.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deltacode_errors</span></code> – A list of one or more strings identifying errors (if any) that occurred
+during the codebase-comparison process.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deltas_count</span></code> – An integer representing the number of ‘Delta’ objects – the file-level
+comparisons of the two codebases (discussed in the next section) – contained in the DeltaCode
+output’s <code class="docutils literal notranslate"><span class="pre">deltas</span></code> key/value pair.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>If the user’s command-line input does not include the <code class="docutils literal notranslate"><span class="pre">-a</span></code> or <code class="docutils literal notranslate"><span class="pre">--all-delta-types</span></code> flag
+(see the discussion above of the <code class="docutils literal notranslate"><span class="pre">--all-delta-types</span></code> field/key), the DeltaCode output will
+omit details for unmodified files and consequently the deltas_count field will not include
+unmodified files.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deltas</span></code> – A list of ‘Delta’ objects, each of which represents a file-level comparison (i.e.,
+the “delta”) of the ‘new’ and ‘old’ codebases. The Delta object is discussed in further detail
+in the next section.</p></li>
+</ol>
+<p>This is the top-level <code class="docutils literal notranslate"><span class="pre">JSON</span></code> structure of the key/value pairs described above:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;deltacode_notice&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;deltacode_options&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;--new&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;--old&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;--all-delta-types&quot;</span><span class="p">:</span> <span class="n">false</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;deltacode_version&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;deltacode_errors&quot;</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="s2">&quot;deltas_count&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="s2">&quot;deltas&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">one</span> <span class="ow">or</span> <span class="n">more</span> <span class="n">Delta</span> <span class="n">objects</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>The Delta Object</strong></p>
+<p>Each Delta object consists of four key/value pairs:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">factors</span></code>: A list of one or more strings representing the factors that characterize the
+file-level comparison and are used to calculate the resulting score, e.g.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;factors&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;added&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;license info added&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;copyright info added&quot;</span>
+    <span class="p">],</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p>The possible values for the factors field are discussed in some detail in DeltaCode Scoring
+<a class="reference internal" href="deltacode_scoring.html#deltacode-scoring"><span class="std std-ref">Deltacode Scoring</span></a>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">score</span></code>: An integer representing the magnitude/importance of the file-level change – the
+higher the <code class="docutils literal notranslate"><span class="pre">score</span></code>, the greater the change. For further details about the DeltaCode scoring
+system, see DeltaCode Scoring <a class="reference internal" href="deltacode_scoring.html#deltacode-scoring"><span class="std std-ref">Deltacode Scoring</span></a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">new</span></code>: A ‘File’ object containing key/value pairs of certain ScanCode-based file attributes
+(<code class="docutils literal notranslate"><span class="pre">path</span></code>, <code class="docutils literal notranslate"><span class="pre">licenses</span></code>, <code class="docutils literal notranslate"><span class="pre">copyrights</span></code> etc.) for the file in the codebase designated by the
+user as <code class="docutils literal notranslate"><span class="pre">new</span></code>. If the Delta object represents the removal of a file (the <code class="docutils literal notranslate"><span class="pre">factors</span></code> value
+would be <code class="docutils literal notranslate"><span class="pre">removed</span></code>), the value of <code class="docutils literal notranslate"><span class="pre">new</span></code> will be <code class="docutils literal notranslate"><span class="pre">null</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">old</span></code>: A ‘File’ object containing key/value pairs of certain ScanCode-based file attributes
+for the file in the codebase designated by the user as <code class="docutils literal notranslate"><span class="pre">old</span></code>. If the Delta object represents
+the addition of a file (the <code class="docutils literal notranslate"><span class="pre">factors</span></code> value would be <code class="docutils literal notranslate"><span class="pre">added</span></code>), the value of <code class="docutils literal notranslate"><span class="pre">old</span></code> will be
+<code class="docutils literal notranslate"><span class="pre">null</span></code>.</p></li>
+</ul>
+<p>The JSON structure of a Delta object looks like this::</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;factors&quot;</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="s2">&quot;score&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="s2">&quot;new&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;sha1&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;original_path&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;licenses&quot;</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="s2">&quot;copyrights&quot;</span><span class="p">:</span> <span class="p">[]</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;old&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;sha1&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;original_path&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;licenses&quot;</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="s2">&quot;copyrights&quot;</span><span class="p">:</span> <span class="p">[]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>The File Object</strong></p>
+<p>As you saw in the preceding section, the File object has the following JSON structure::</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="s2">&quot;sha1&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;original_path&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;licenses&quot;</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="s2">&quot;copyrights&quot;</span><span class="p">:</span> <span class="p">[]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>A File object consists of eight key/value pairs:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code>: – A string identifying the path to the file in question.
+In processing the ‘new’ and ‘old’ codebases to be compared, DeltaCode may modify the codebases’
+respective file paths in order to properly align them for comparison purposes. As a result, a
+File object’s <code class="docutils literal notranslate"><span class="pre">path</span></code> value may differ to some extent from its <code class="docutils literal notranslate"><span class="pre">original_path</span></code> value
+(see below).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code>: – A string indicating whether the object is a <code class="docutils literal notranslate"><span class="pre">file</span></code> or a <code class="docutils literal notranslate"><span class="pre">directory</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: – A string reflecting the name of the file.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code>: – An integer reflecting the size of the file in KB.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sha1</span></code>: – A string reflecting the file’s sha1 value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">original_path</span></code>: – A string identifying the file’s path as it exists in the codebase, prior to
+any processing by DeltaCode to modify the path for purposes of comparing the two codebases.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">licenses</span></code>: – A list of License objects reflecting all licenses identified by ScanCode as
+associated with the file. This list can be empty.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">copyrights</span></code>: – A list of Copyright objects reflecting all copyrights identified by ScanCode
+as associated with the file. This list can be empty.</p></li>
+</ul>
+<p><strong>Example of Detailed JSON output</strong></p>
+<p>Here is an example of the detailed DeltaCode output in <code class="docutils literal notranslate"><span class="pre">JSON</span></code> format displaying one Delta object
+in the <code class="docutils literal notranslate"><span class="pre">deltas</span></code> key/value pair – in this case, an excerpt from the <code class="docutils literal notranslate"><span class="pre">JSON</span></code> output of a
+DeltaCode comparison of <code class="docutils literal notranslate"><span class="pre">zlib-1.2.11</span></code> and <code class="docutils literal notranslate"><span class="pre">zlib-1.2.9</span></code>::</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;deltacode_notice&quot;</span><span class="p">:</span> <span class="s2">&quot;Generated with DeltaCode and provided on an </span><span class="se">\&quot;</span><span class="s2">AS IS</span><span class="se">\&quot;</span><span class="s2"> BASIS, WITHOUT WARRANTIES</span><span class="se">\n</span><span class="s2">OR CONDITIONS OF ANY KIND, either express or implied. No content created from</span><span class="se">\n</span><span class="s2">DeltaCode should be considered or used as legal advice. Consult an Attorney</span><span class="se">\n</span><span class="s2">for any legal advice.</span><span class="se">\n</span><span class="s2">DeltaCode is a free software codebase-comparison tool from nexB Inc. and others.</span><span class="se">\n</span><span class="s2">Visit https://github.com/nexB/deltacode/ for support and download.&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;deltacode_options&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;--new&quot;</span><span class="p">:</span> <span class="s2">&quot;C:/scans/zlib-1.2.11.json&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;--old&quot;</span><span class="p">:</span> <span class="s2">&quot;C:/scans/zlib-1.2.9.json&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;--all-delta-types&quot;</span><span class="p">:</span> <span class="n">false</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;deltacode_version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0.0.post49.e3ff7be&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;deltacode_errors&quot;</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="s2">&quot;deltas_count&quot;</span><span class="p">:</span> <span class="mi">40</span><span class="p">,</span>
+  <span class="s2">&quot;deltas&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;factors&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;modified&quot;</span>
+      <span class="p">],</span>
+      <span class="s2">&quot;score&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+      <span class="s2">&quot;new&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;trees.c&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;file&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;trees.c&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">43761</span><span class="p">,</span>
+        <span class="s2">&quot;sha1&quot;</span><span class="p">:</span> <span class="s2">&quot;ab030a33e399e7284b9ddf9bba64d0dd2730b417&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;original_path&quot;</span><span class="p">:</span> <span class="s2">&quot;zlib-1.2.11/trees.c&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;licenses&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="p">{</span>
+            <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;zlib&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;score&quot;</span><span class="p">:</span> <span class="mf">60.0</span><span class="p">,</span>
+            <span class="s2">&quot;short_name&quot;</span><span class="p">:</span> <span class="s2">&quot;ZLIB License&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;category&quot;</span><span class="p">:</span> <span class="s2">&quot;Permissive&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;owner&quot;</span><span class="p">:</span> <span class="s2">&quot;zlib&quot;</span>
+          <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;copyrights&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="p">{</span>
+            <span class="s2">&quot;statements&quot;</span><span class="p">:</span> <span class="p">[</span>
+              <span class="s2">&quot;Copyright (c) 1995-2017 Jean-loup Gailly&quot;</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;holders&quot;</span><span class="p">:</span> <span class="p">[</span>
+              <span class="s2">&quot;Jean-loup Gailly&quot;</span>
+            <span class="p">]</span>
+          <span class="p">}</span>
+        <span class="p">]</span>
+      <span class="p">},</span>
+      <span class="s2">&quot;old&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;trees.c&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;file&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;trees.c&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">43774</span><span class="p">,</span>
+        <span class="s2">&quot;sha1&quot;</span><span class="p">:</span> <span class="s2">&quot;1a554d4edfaecfd377c71b345adb647d15ff7221&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;original_path&quot;</span><span class="p">:</span> <span class="s2">&quot;zlib-1.2.9/trees.c&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;licenses&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="p">{</span>
+            <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;zlib&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;score&quot;</span><span class="p">:</span> <span class="mf">60.0</span><span class="p">,</span>
+            <span class="s2">&quot;short_name&quot;</span><span class="p">:</span> <span class="s2">&quot;ZLIB License&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;category&quot;</span><span class="p">:</span> <span class="s2">&quot;Permissive&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;owner&quot;</span><span class="p">:</span> <span class="s2">&quot;zlib&quot;</span>
+          <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;copyrights&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="p">{</span>
+            <span class="s2">&quot;statements&quot;</span><span class="p">:</span> <span class="p">[</span>
+              <span class="s2">&quot;Copyright (c) 1995-2016 Jean-loup Gailly&quot;</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;holders&quot;</span><span class="p">:</span> <span class="p">[</span>
+              <span class="s2">&quot;Jean-loup Gailly&quot;</span>
+            <span class="p">]</span>
+          <span class="p">}</span>
+        <span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="p">[</span><span class="n">additional</span> <span class="n">Delta</span> <span class="n">objects</span> <span class="k">if</span> <span class="nb">any</span><span class="p">]</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="csv">
+<h3>CSV<a class="headerlink" href="#csv" title="Permalink to this headline">¶</a></h3>
+<p>Compared with DeltaCode’s JSON output, the CSV output is relatively simple, comprising the
+following seven fields as column headers, with each row representing one Delta object:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Score</span></code> – An integer representing the magnitude/importance of the file-level change.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Factors</span></code> – One or more strings – with no comma or other separators – representing the
+factors that characterize the file-level comparison and are used to calculate the resulting
+score.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Path</span></code> – A string identifying the file’s path in the ‘new’ codebase unless the Delta object
+reflects a <code class="docutils literal notranslate"><span class="pre">removed</span></code> file, in which case the string identifies the file’s path in the ‘old’
+codebase. As noted above, this path may vary to some extent from the file’s actual path in its
+codebase as a result of DeltaCode processing for codebase comparison purposes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Name</span></code> – A string reflecting the file’s name in the ‘new’ codebase unless the Delta object
+reflects a <code class="docutils literal notranslate"><span class="pre">removed</span></code> file, in which case the string reflects the file’s name in the ‘old’
+codebase.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Type</span></code> – A string reflecting the file’s type (‘file’ or ‘directory’) in the ‘new’ codebase
+unless the Delta object reflects a <code class="docutils literal notranslate"><span class="pre">removed</span></code> file, in which case the string reflects the file’s
+type in the ‘old’ codebase.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Size</span></code> – An integer reflecting the file’s size in KB in the ‘new’ codebase unless the Delta
+object reflects a <code class="docutils literal notranslate"><span class="pre">removed</span></code> file, in which case the string reflects the file’s size in the
+‘old’ codebase.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Old</span> <span class="pre">Path</span></code> – A string reflecting the file’s path in the ‘old’ codebase if the Delta object
+reflects a <code class="docutils literal notranslate"><span class="pre">moved</span></code> file. If the Delta object does not involve a <code class="docutils literal notranslate"><span class="pre">moved</span></code> file, this field is
+empty. As with the <code class="docutils literal notranslate"><span class="pre">Path</span></code> field/column header above, this path may differ to some extent from
+the file’s actual path in its codebase due to DeltaCode processing for codebase comparison
+purposes.</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="deltacode_scoring.html" class="btn btn-neutral float-right" title="Deltacode Scoring" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="comprehensive_installation.html" class="btn btn-neutral float-left" title="Comprehensive Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, AyanSinha
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

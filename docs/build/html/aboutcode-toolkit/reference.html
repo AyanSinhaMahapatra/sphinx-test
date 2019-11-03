@@ -1,0 +1,589 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Reference &mdash; sphinx-test-1.0 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ABOUT File Specification v3.1.2" href="specification.html" />
+    <link rel="prev" title="AboutCode Toolkit" href="home.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> sphinx-test-1.0
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../scancode-workbench/index.html"><strong>Scancode-Workbench Documentation</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deltacode/index.html"><strong>Deltacode Documentation</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aboutcode-docs/home.html">AboutCode Docs</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html"><strong>AboutCode-Toolkit Documentation</strong></a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="home.html">AboutCode Toolkit</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#about">about</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#attrib">attrib</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#purpose">Purpose</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#options">Options</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#check">check</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Purpose</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Options</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#gen">gen</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">Purpose</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">Options</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#inventory">inventory</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id5">Purpose</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">Options</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#special-notes">Special Notes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#multiple-licenses-support-format">Multiple licenses support format</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="specification.html">ABOUT File Specification v3.1.2</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../aboutcode-data/abcd.html">AboutCode Data : ABCD</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc_maintenance.html">Document Maintenance</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">sphinx-test-1.0</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html"><strong>AboutCode-Toolkit Documentation</strong></a> &raquo;</li>
+        
+      <li>Reference</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/aboutcode-toolkit/reference.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="reference">
+<h1>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="about">
+<h2>about<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
+<p><strong>Syntax</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">about</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="p">[</span><span class="n">COMMANDS</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><strong>Options:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">version</span>    <span class="n">Show</span> <span class="n">the</span> <span class="n">version</span> <span class="ow">and</span> <span class="n">exit</span><span class="o">.</span>
+<span class="o">--</span><span class="n">help</span>       <span class="n">Show</span> <span class="n">this</span> <span class="n">message</span> <span class="ow">and</span> <span class="n">exit</span><span class="o">.</span>
+</pre></div>
+</div>
+<p><strong>Commands:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">attrib</span>     <span class="n">LOCATION</span><span class="p">:</span> <span class="n">directory</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">:</span> <span class="n">output</span> <span class="n">file</span>
+<span class="n">check</span>      <span class="n">LOCATION</span><span class="p">:</span> <span class="n">directory</span>
+<span class="n">gen</span>        <span class="n">LOCATION</span><span class="p">:</span> <span class="nb">input</span> <span class="n">file</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">:</span> <span class="n">directory</span>
+<span class="n">inventory</span>  <span class="n">LOCATION</span><span class="p">:</span> <span class="n">directory</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">:</span> <span class="n">csv</span> <span class="n">file</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="attrib">
+<h2>attrib<a class="headerlink" href="#attrib" title="Permalink to this headline">¶</a></h2>
+<p><strong>Syntax</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">about</span> <span class="n">attrib</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="n">LOCATION</span> <span class="n">OUTPUT</span>
+
+<span class="n">LOCATION</span><span class="p">:</span> <span class="n">Path</span> <span class="n">to</span> <span class="n">an</span> <span class="n">ABOUT</span> <span class="n">file</span> <span class="ow">or</span> <span class="n">a</span> <span class="n">directory</span> <span class="n">containing</span> <span class="n">ABOUT</span> <span class="n">files</span><span class="o">.</span>
+<span class="n">OUTPUT</span><span class="p">:</span> <span class="n">Path</span> <span class="n">to</span> <span class="n">output</span> <span class="n">file</span> <span class="n">to</span> <span class="n">write</span> <span class="n">the</span> <span class="n">attribution</span> <span class="n">to</span><span class="o">.</span>
+</pre></div>
+</div>
+<p><strong>Options:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">inventory</span> <span class="n">PATH</span>            <span class="n">Path</span> <span class="n">to</span> <span class="n">an</span> <span class="n">inventory</span> <span class="n">file</span><span class="o">.</span>
+<span class="o">--</span><span class="n">mapping</span>                   <span class="n">Use</span> <span class="k">for</span> <span class="n">mapping</span> <span class="n">between</span> <span class="n">the</span> <span class="nb">input</span> <span class="n">keys</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">ABOUT</span> <span class="n">field</span><span class="o">.</span>
+                            <span class="n">names</span> <span class="o">-</span> <span class="n">mapping</span><span class="o">.</span><span class="n">config</span>
+<span class="o">--</span><span class="n">mapping</span><span class="o">-</span><span class="n">file</span>              <span class="n">Use</span> <span class="n">a</span> <span class="n">custom</span> <span class="n">mapping</span> <span class="n">file</span> <span class="k">with</span> <span class="n">mapping</span> <span class="n">between</span> <span class="nb">input</span>
+                            <span class="n">keys</span> <span class="ow">and</span> <span class="n">ABOUT</span> <span class="n">field</span> <span class="n">names</span><span class="o">.</span>
+<span class="o">--</span><span class="n">template</span> <span class="n">PATH</span>             <span class="n">Path</span> <span class="n">to</span> <span class="n">a</span> <span class="n">custom</span> <span class="n">attribution</span> <span class="n">template</span><span class="o">.</span>
+<span class="o">--</span><span class="n">vartext</span> <span class="n">TEXT</span>              <span class="n">Variable</span> <span class="n">texts</span> <span class="n">to</span> <span class="n">the</span> <span class="n">attribution</span> <span class="n">template</span>
+<span class="o">--</span><span class="n">verbose</span>                   <span class="n">Show</span> <span class="nb">all</span> <span class="n">the</span> <span class="n">errors</span> <span class="ow">and</span> <span class="n">warning</span><span class="o">.</span>
+<span class="o">-</span><span class="n">q</span><span class="p">,</span> <span class="o">--</span><span class="n">quiet</span>                 <span class="n">Do</span> <span class="ow">not</span> <span class="nb">print</span> <span class="nb">any</span> <span class="n">error</span><span class="o">/</span><span class="n">warning</span><span class="o">.</span>
+<span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>                  <span class="n">Show</span> <span class="n">this</span> <span class="n">message</span> <span class="ow">and</span> <span class="n">exit</span><span class="o">.</span>
+</pre></div>
+</div>
+<div class="section" id="purpose">
+<h3>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h3>
+<p>Generate an attribution file which contains the all license information
+from the LOCATION along with the license text.</p>
+<p>Assume the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;/home/about_files/&#39;</span><span class="o">**</span> <span class="n">contains</span> <span class="nb">all</span> <span class="n">the</span> <span class="n">ABOUT</span> <span class="n">files</span> <span class="p">[</span><span class="n">LOCATION</span><span class="p">]</span>
+<span class="s1">&#39;/home/attribution/attribution.html&#39;</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">user</span><span class="s1">&#39;s output path [OUTPUT]</span>
+<span class="s1">&#39;/home/project/component_list.csv&#39;</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">inventory</span> <span class="n">that</span> <span class="n">user</span> <span class="n">want</span> <span class="n">to</span> <span class="n">be</span> <span class="n">generated</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ about attrib /home/about_files/ /home/attribution/attribution.html
+</pre></div>
+</div>
+</div>
+<div class="section" id="options">
+<h3>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>--inventory
+
+    This option allows you to define which ABOUT files should be used for attribution generation.
+    For instance,
+    &#39;/home/project/component_list.csv&#39; is the inventory that user want to be generated
+
+$ about attrib --inventory /home/project/component_list.csv LOCATION OUTPUT
+
+--mapping
+
+    See mapping.config for details
+
+--mapping-file
+
+    Same behavior as `--mapping` but with custom mapping file
+
+$ about attrib --mapping-file CUSTOM_MAPPING_FILE_PATH LOCATION OUTPUT
+
+--template
+
+    This option allows you to use your own template for attribution generation.
+    For instance, if you have a custom template located at:
+    /home/custom_template/template.html
+
+$ about attrib --template /home/custom_template/template.html LOCATION OUTPUT
+
+--vartext
+
+    This option allow you to pass variable texts to the attribution template
+
+$ about attrib --vartext &quot;title=Attribution Notice&quot; --vartext &quot;header=Product 101&quot; LOCATION OUTPUT
+
+    Users can use the following in the template to get the vartext:
+    {{ vartext_dict[&#39;title&#39;] }}
+    {{ vartext_dict[&#39;header&#39;] }}
+
+--verbose
+
+    This option tells the tool to show all errors found.
+    The default behavior will only show &#39;CRITICAL&#39;, &#39;ERROR&#39;, and &#39;WARNING&#39;
+</pre></div>
+</div>
+<dl class="simple">
+<dt>The following data are passed to jinja2 and, therefore, can be used for a custom template:</dt><dd><ul class="simple">
+<li><p>about object: the about objects</p></li>
+<li><p>common_licenses: a common license keys list in licenses.py</p></li>
+<li><p>license_key_and_context: a dictionary list with license_key as a key and license text as the
+value</p></li>
+<li><p>license_file_name_and_key: a dictionary list with license file name as a key and license key
+as the value</p></li>
+<li><p>license_key_to_license_name: a dictionary list with license key as a key and license file name
+as the value</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="check">
+<h2>check<a class="headerlink" href="#check" title="Permalink to this headline">¶</a></h2>
+<p><strong>Syntax</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">about</span> <span class="n">check</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="n">LOCATION</span>
+
+<span class="n">LOCATION</span><span class="p">:</span> <span class="n">Path</span> <span class="n">to</span> <span class="n">an</span> <span class="n">ABOUT</span> <span class="n">file</span> <span class="ow">or</span> <span class="n">a</span> <span class="n">directory</span> <span class="k">with</span> <span class="n">ABOUT</span> <span class="n">files</span><span class="o">.</span>
+</pre></div>
+</div>
+<p><strong>Options:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">verbose</span>                <span class="n">Show</span> <span class="nb">all</span> <span class="n">the</span> <span class="n">errors</span> <span class="ow">and</span> <span class="n">warning</span>
+<span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>               <span class="n">Show</span> <span class="n">this</span> <span class="n">message</span> <span class="ow">and</span> <span class="n">exit</span><span class="o">.</span>
+</pre></div>
+</div>
+<div class="section" id="id1">
+<h3>Purpose<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Validating ABOUT files at LOCATION.</p>
+</div>
+<div class="section" id="id2">
+<h3>Options<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>--verbose
+
+    This option tells the tool to show all errors found.
+    The default behavior will only show &#39;CRITICAL&#39;, &#39;ERROR&#39;, and &#39;WARNING&#39;
+
+$ about check --verbose /home/project/about_files/
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="gen">
+<h2>gen<a class="headerlink" href="#gen" title="Permalink to this headline">¶</a></h2>
+<p><strong>Syntax</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">about</span> <span class="n">gen</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="n">LOCATION</span> <span class="n">OUTPUT</span>
+
+<span class="n">LOCATION</span><span class="p">:</span> <span class="n">Path</span> <span class="n">to</span> <span class="n">a</span> <span class="n">JSON</span> <span class="ow">or</span> <span class="n">CSV</span> <span class="n">inventory</span> <span class="n">file</span><span class="o">.</span>
+<span class="n">OUTPUT</span><span class="p">:</span> <span class="n">Path</span> <span class="n">to</span> <span class="n">a</span> <span class="n">directory</span> <span class="n">where</span> <span class="n">ABOUT</span> <span class="n">files</span> <span class="n">are</span> <span class="n">generated</span><span class="o">.</span>
+</pre></div>
+</div>
+<p><strong>Options:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">fetch</span><span class="o">-</span><span class="n">license</span> <span class="n">KEY</span>                 <span class="n">Fetch</span> <span class="n">licenses</span> <span class="n">text</span> <span class="kn">from</span> <span class="nn">a</span> <span class="n">DejaCode</span> <span class="n">API</span><span class="o">.</span> <span class="ow">and</span>
+                                    <span class="n">create</span> <span class="o">&lt;</span><span class="n">license</span><span class="o">&gt;.</span><span class="n">LICENSE</span> <span class="n">side</span><span class="o">-</span><span class="n">by</span><span class="o">-</span><span class="n">side</span>
+                                    <span class="k">with</span> <span class="n">the</span> <span class="n">generated</span> <span class="o">.</span><span class="n">ABOUT</span> <span class="n">file</span> <span class="n">using</span> <span class="n">data</span>
+                                    <span class="n">fetched</span> <span class="kn">from</span> <span class="nn">a</span> <span class="n">DejaCode</span> <span class="n">License</span> <span class="n">Library</span><span class="o">.</span> <span class="n">The</span>
+                                    <span class="n">following</span> <span class="n">additional</span> <span class="n">options</span> <span class="n">are</span> <span class="n">required</span><span class="p">:</span>
+
+                                    <span class="n">api_url</span> <span class="o">-</span> <span class="n">URL</span> <span class="n">to</span> <span class="n">the</span> <span class="n">DejaCode</span> <span class="n">License</span> <span class="n">Library</span>
+                                    <span class="n">API</span> <span class="n">endpoint</span>
+
+                                    <span class="n">api_key</span> <span class="o">-</span> <span class="n">DejaCode</span> <span class="n">API</span> <span class="n">key</span>
+                                    <span class="n">Example</span> <span class="n">syntax</span><span class="p">:</span>
+
+                                    <span class="n">about</span> <span class="n">gen</span> <span class="o">--</span><span class="n">fetch</span><span class="o">-</span><span class="n">license</span> <span class="s1">&#39;api_url&#39;</span> <span class="s1">&#39;api_key&#39;</span>
+<span class="o">--</span><span class="n">license</span><span class="o">-</span><span class="n">notice</span><span class="o">-</span><span class="n">text</span><span class="o">-</span><span class="n">location</span> <span class="n">PATH</span> <span class="n">Copy</span> <span class="n">the</span> <span class="s1">&#39;license_file&#39;</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">directory</span> <span class="n">to</span>
+                                    <span class="n">the</span> <span class="n">generated</span> <span class="n">location</span><span class="o">.</span>
+<span class="o">--</span><span class="n">mapping</span>                           <span class="n">Use</span> <span class="k">for</span> <span class="n">mapping</span> <span class="n">between</span> <span class="n">the</span> <span class="nb">input</span> <span class="n">keys</span> <span class="ow">and</span>
+                                    <span class="n">the</span> <span class="n">ABOUT</span> <span class="n">field</span> <span class="n">names</span> <span class="o">-</span> <span class="n">mapping</span><span class="o">.</span><span class="n">config</span>
+<span class="o">--</span><span class="n">mapping</span><span class="o">-</span><span class="n">file</span>                      <span class="n">Use</span> <span class="n">a</span> <span class="n">custom</span> <span class="n">mapping</span> <span class="n">file</span> <span class="k">with</span> <span class="n">mapping</span> <span class="n">between</span> <span class="nb">input</span>
+                                    <span class="n">keys</span> <span class="ow">and</span> <span class="n">ABOUT</span> <span class="n">field</span> <span class="n">names</span><span class="o">.</span>
+<span class="o">--</span><span class="n">verbose</span>                           <span class="n">Show</span> <span class="nb">all</span> <span class="n">the</span> <span class="n">errors</span> <span class="ow">and</span> <span class="n">warning</span><span class="o">.</span>
+<span class="o">-</span><span class="n">q</span><span class="p">,</span> <span class="o">--</span><span class="n">quiet</span>                         <span class="n">Do</span> <span class="ow">not</span> <span class="nb">print</span> <span class="nb">any</span> <span class="n">error</span><span class="o">/</span><span class="n">warning</span><span class="o">.</span>
+<span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>                          <span class="n">Show</span> <span class="n">this</span> <span class="n">message</span> <span class="ow">and</span> <span class="n">exit</span><span class="o">.</span>
+</pre></div>
+</div>
+<div class="section" id="id3">
+<h3>Purpose<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Given an inventory of ABOUT files at location, generate ABOUT files in base directory.</p>
+</div>
+<div class="section" id="id4">
+<h3>Options<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>--fetch-license
+
+    Fetch licenses text from a DejaCode API. and create &lt;license&gt;.LICENSE side-by-side
+    with the generated .ABOUT file using data fetched from a DejaCode License Library.
+
+    This option requires 2 parameters:
+        api_url - URL to the DJE License Library
+        api_key - Hash key to authenticate yourself in the API.
+
+    In addition, the input needs to have the &#39;license_expression&#39; field.
+    (Please contact nexB to get the api_* value to use for this feature)
+
+$ about gen --fetch-license &#39;api_url&#39; &#39;api_key&#39; LOCATION OUTPUT
+
+--license-notice-text-location
+
+    Copy the license files and notice files to the generated location based on the
+    &#39;license_file&#39; and &#39;notice_file&#39; value in the input from the directory
+
+    For instance,
+    the directory, /home/licenses_notices/, contains all the licenses and notices that you want:
+    /home/license/apache2.LICENSE
+    /home/license/jquery.js.NOTICE
+
+$ about gen --license-notice-text-location /home/licenses_notices/ LOCATION OUTPUT
+
+--mapping
+
+    See mapping.config for details
+
+--mapping-file
+
+    Same behavior as `--mapping` but with custom mapping file
+
+$ about attrib --mapping-file CUSTOM_MAPPING_FILE_PATH LOCATION OUTPUT
+
+--verbose
+
+    This option tells the tool to show all errors found.
+    The default behavior will only show &#39;CRITICAL&#39;, &#39;ERROR&#39;, and &#39;WARNING&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="inventory">
+<h2>inventory<a class="headerlink" href="#inventory" title="Permalink to this headline">¶</a></h2>
+<p><strong>Syntax</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">about</span> <span class="n">inventory</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="n">LOCATION</span> <span class="n">OUTPUT</span>
+
+<span class="n">LOCATION</span><span class="p">:</span> <span class="n">Path</span> <span class="n">to</span> <span class="n">an</span> <span class="n">ABOUT</span> <span class="n">file</span> <span class="ow">or</span> <span class="n">a</span> <span class="n">directory</span> <span class="k">with</span> <span class="n">ABOUT</span> <span class="n">files</span><span class="o">.</span>
+<span class="n">OUTPUT</span><span class="p">:</span> <span class="n">Path</span> <span class="n">to</span> <span class="n">the</span> <span class="n">JSON</span> <span class="ow">or</span> <span class="n">CSV</span> <span class="n">inventory</span> <span class="n">file</span> <span class="n">to</span> <span class="n">create</span><span class="o">.</span>
+</pre></div>
+</div>
+<p><strong>Options:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nb">filter</span> <span class="n">TEXT</span>               <span class="n">Filter</span> <span class="k">for</span> <span class="n">the</span> <span class="n">output</span> <span class="n">inventory</span><span class="o">.</span>
+<span class="o">-</span><span class="n">f</span><span class="p">,</span> <span class="o">--</span><span class="nb">format</span> <span class="p">[</span><span class="n">json</span><span class="o">|</span><span class="n">csv</span><span class="p">]</span>     <span class="n">Set</span> <span class="n">OUTPUT</span> <span class="n">file</span> <span class="nb">format</span><span class="o">.</span>  <span class="p">[</span><span class="n">default</span><span class="p">:</span> <span class="n">csv</span><span class="p">]</span>
+<span class="o">--</span><span class="n">mapping</span>                   <span class="n">Use</span> <span class="n">file</span> <span class="n">mapping</span><span class="o">.</span><span class="n">config</span> <span class="n">to</span> <span class="n">collect</span> <span class="n">the</span> <span class="n">defined</span> <span class="ow">not</span> <span class="n">supported</span> <span class="n">fields</span> <span class="ow">in</span> <span class="n">ABOUT</span> <span class="n">files</span><span class="o">.</span>
+<span class="o">--</span><span class="n">mapping</span><span class="o">-</span><span class="n">file</span>              <span class="n">Use</span> <span class="n">a</span> <span class="n">custom</span> <span class="n">mapping</span> <span class="n">file</span> <span class="k">with</span> <span class="n">mapping</span> <span class="n">between</span> <span class="nb">input</span>
+                            <span class="n">keys</span> <span class="ow">and</span> <span class="n">ABOUT</span> <span class="n">field</span> <span class="n">names</span><span class="o">.</span>
+<span class="o">--</span><span class="n">mapping</span><span class="o">-</span><span class="n">output</span> <span class="n">FILE</span>       <span class="n">Use</span> <span class="n">a</span> <span class="n">custom</span> <span class="n">mapping</span> <span class="n">file</span> <span class="k">with</span> <span class="n">mapping</span> <span class="n">between</span>
+                            <span class="n">ABOUT</span> <span class="n">field</span> <span class="n">names</span> <span class="ow">and</span> <span class="n">output</span> <span class="n">keys</span>
+<span class="o">--</span><span class="n">verbose</span>                   <span class="n">Show</span> <span class="nb">all</span> <span class="n">the</span> <span class="n">errors</span> <span class="ow">and</span> <span class="n">warning</span><span class="o">.</span>
+<span class="o">-</span><span class="n">q</span><span class="p">,</span> <span class="o">--</span><span class="n">quiet</span>                 <span class="n">Do</span> <span class="ow">not</span> <span class="nb">print</span> <span class="nb">any</span> <span class="n">error</span><span class="o">/</span><span class="n">warning</span><span class="o">.</span>
+<span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>                  <span class="n">Show</span> <span class="n">this</span> <span class="n">message</span> <span class="ow">and</span> <span class="n">exit</span><span class="o">.</span>
+</pre></div>
+</div>
+<div class="section" id="id5">
+<h3>Purpose<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>Collect a JSON or CSV inventory of components from ABOUT files.</p>
+</div>
+<div class="section" id="id6">
+<h3>Options<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>-filter TEXT
+
+    Filter for the output inventory.
+
+$ about inventory --filter &quot;license_expression=gpl-2.0&quot; LOCATION OUTPUT
+
+The above command will only inventory the ABOUT files which have the &quot;license_expression: gpl-2.0&quot;
+
+-f, --format [json|csv]
+
+    Set OUTPUT file format.  [default: csv]
+
+$ about inventory -f json LOCATION OUTPUT
+
+--mapping
+
+    See mapping.config for details
+
+--mapping-file
+
+    Same behavior as `--mapping` but with custom mapping file
+
+$ about inventory --mapping-file CUSTOM_MAPPING_FILE_PATH LOCATION OUTPUT
+
+--mapping-output
+
+    Same behavior as `--mapping-file` but with custom mapping file
+    In the custom mapping file, the left side is the custom key name where
+    the right side is the ABOUT field name. For instance,
+    Component: name
+
+    The &quot;Component&quot; is a custom field name for the output
+    The &quot;name&quot; is one of the defaul ABOUT field name that user want to convert
+
+$ about inventory --mapping-output CUSTOM_MAPPING_FILE_PATH LOCATION OUTPUT
+
+--verbose
+
+    This option tells the tool to show all errors found.
+    The default behavior will only show &#39;CRITICAL&#39;, &#39;ERROR&#39;, and &#39;WARNING&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="special-notes">
+<h2>Special Notes<a class="headerlink" href="#special-notes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="multiple-licenses-support-format">
+<h3>Multiple licenses support format<a class="headerlink" href="#multiple-licenses-support-format" title="Permalink to this headline">¶</a></h3>
+<p>The multiple licenses support format for CSV files are separated by line break</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 10%" />
+<col style="width: 28%" />
+<col style="width: 36%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>about_resource</p></td>
+<td><p>name</p></td>
+<td><p>license_key</p></td>
+<td><p>license_file</p></td>
+</tr>
+<tr class="row-even"><td><p>test.tar.xz</p></td>
+<td><p>test</p></td>
+<td><div class="line-block">
+<div class="line">apache-2.0</div>
+<div class="line">mit</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">apache-2.0.LICENSE</div>
+<div class="line">mit.LICENSE</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>The multiple licenses support format for ABOUT files are by “grouping” with the keyword “licenses”</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">about_resource</span><span class="p">:</span> <span class="n">test</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">xz</span>
+<span class="n">name</span><span class="p">:</span> <span class="n">test</span>
+<span class="n">licenses</span><span class="p">:</span>
+    <span class="o">-</span>   <span class="n">key</span><span class="p">:</span> <span class="n">apache</span> <span class="mf">2.0</span>
+        <span class="n">name</span><span class="p">:</span> <span class="n">apache</span><span class="o">-</span><span class="mf">2.0</span><span class="o">.</span><span class="n">LICENSE</span>
+    <span class="o">-</span>   <span class="n">key</span><span class="p">:</span> <span class="n">mit</span>
+        <span class="n">name</span><span class="p">:</span> <span class="n">mit</span><span class="o">.</span><span class="n">LICENSE</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="specification.html" class="btn btn-neutral float-right" title="ABOUT File Specification v3.1.2" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="home.html" class="btn btn-neutral float-left" title="AboutCode Toolkit" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, AyanSinha
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

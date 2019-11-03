@@ -1,0 +1,912 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Google Summer of Code 2019 &mdash; sphinx-test-1.0 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Writing good Commit Messages" href="writing_good_commit_messages.html" />
+    <link rel="prev" title="Google Summer of Code 2018" href="gsoc_2018.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> sphinx-test-1.0
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../scancode-workbench/index.html"><strong>Scancode-Workbench Documentation</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deltacode/index.html"><strong>Deltacode Documentation</strong></a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="home.html">AboutCode Docs</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="contributor_project_ideas.html">Contributor Project Ideas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gsod_2019.html">Google Season of Docs 2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gsoc_2017.html">Google Summer of Code 2017</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gsoc_2018.html">Google Summer of Code 2018</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Google Summer of Code 2019</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#table-of-contents">Table of Contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#aboutcode-projects-are">AboutCode projects are…</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#contact">Contact</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#technology">Technology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skills">Skills</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#about-your-project-application">About your project application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#our-project-ideas">Our Project ideas</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#scancode-ideas">ScanCode ideas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#deltacode-projects">DeltaCode projects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tracecode-projects">TraceCode projects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#conan-and-other-projects">Conan and Other projects</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#mentoring">Mentoring</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="writing_good_commit_messages.html">Writing good Commit Messages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../aboutcode-toolkit/index.html"><strong>AboutCode-Toolkit Documentation</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aboutcode-data/abcd.html">AboutCode Data : ABCD</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc_maintenance.html">Document Maintenance</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">sphinx-test-1.0</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="home.html">AboutCode Docs</a> &raquo;</li>
+        
+      <li>Google Summer of Code 2019</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/aboutcode-docs/gsoc_2019.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="google-summer-of-code-2019">
+<span id="gsoc2019"></span><h1>Google Summer of Code 2019<a class="headerlink" href="#google-summer-of-code-2019" title="Permalink to this headline">¶</a></h1>
+<p>AboutCode is participating in the Google Summer of Code in 2019 as a mentoring org. This page
+contain all the information for students and anyone else interested in helping.</p>
+<p>AboutCode is a family of FOSS projects to uncover data … about software code:</p>
+<ul class="simple">
+<li><p>where does the code come from? which software package?</p></li>
+<li><p>what is its license? copyright?</p></li>
+<li><p>is the code secure, maintained, well coded?</p></li>
+</ul>
+<p>All these are questions that are important to answer: there are million
+of free and open source software components available on the web for reuse.</p>
+<p>Knowing where a software package comes from, what is its license and if it is
+vulnerable and what’s its licensing should be a problem of the past such that
+everyone can safely consume more free and open source software.</p>
+<p><em>Join us to make it so!</em></p>
+<p>Our tools are used to help detect and report the origin and license of source
+code, packages and binaries as well as discover software and package
+dependencies, and in the future track security vulnerabilities, bugs and other
+important software package attributes. This is a suite of command line tools,
+web-based and API servers and desktop applications.</p>
+<div class="section" id="table-of-contents">
+<h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="#aboutcode-projects-are-gsoc19"><span class="std std-ref">AboutCode projects are…</span></a></p></li>
+<li><p><a class="reference internal" href="#contact-gsoc19"><span class="std std-ref">Contact</span></a></p></li>
+<li><p><a class="reference internal" href="#technology-gsoc19"><span class="std std-ref">Technology</span></a></p></li>
+<li><p><a class="reference internal" href="#skills-gsoc19"><span class="std std-ref">Skills</span></a></p></li>
+<li><p><a class="reference internal" href="#about-your-project-application-gsoc19"><span class="std std-ref">About your project application</span></a></p></li>
+<li><p><a class="reference internal" href="#our-project-ideas-gsoc19"><span class="std std-ref">Our Project ideas</span></a></p>
+<ul>
+<li><p><a class="reference internal" href="#improve-copyright-detection-accuracy-and-speed-in-scancode"><span class="std std-ref">Improve Copyright detection accuracy and speed in ScanCode</span></a></p></li>
+<li><p><a class="reference internal" href="#port-scancode-to-python-3-gsoc-2019"><span class="std std-ref">Port ScanCode to Python 3</span></a></p></li>
+<li><p><a class="reference internal" href="#improve-programming-language-detection-and-classification-in-scancode"><span class="std std-ref">Improve Programming language detection and classification in ScanCode</span></a></p></li>
+<li><p><a class="reference internal" href="#improve-license-detection-accuracy-and-speed-in-scancode"><span class="std std-ref">Improve License detection accuracy and speed in ScanCode</span></a></p></li>
+<li><p><a class="reference internal" href="#improve-scancode-scan-summarization-and-deduction"><span class="std std-ref">Improve ScanCode scan summarization and deduction</span></a></p></li>
+<li><p><a class="reference internal" href="#create-linux-distros-and-freebsd-packages-for-scancode"><span class="std std-ref">Create Linux distros and FreeBSD packages for ScanCode.</span></a></p></li>
+<li><p><a class="reference internal" href="#deltacode-projects"><span class="std std-ref">DeltaCode projects</span></a></p></li>
+<li><p><a class="reference internal" href="#tracecode-projects"><span class="std std-ref">TraceCode projects</span></a></p></li>
+<li><p><a class="reference internal" href="#conan-and-other-projects"><span class="std std-ref">Conan and Other projects</span></a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#mentoring-gsoc19"><span class="std std-ref">Mentoring</span></a></p></li>
+</ul>
+</div>
+<div class="section" id="aboutcode-projects-are">
+<span id="aboutcode-projects-are-gsoc19"></span><h2>AboutCode projects are…<a class="headerlink" href="#aboutcode-projects-are" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-toolkit">ScanCode Toolkit</a> is a popular
+command line tool to scan code for licenses, copyrights and packages, used by
+many organizations and FOSS projects, small and large.</p></li>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-workbench">Scancode Workbench</a>
+(formerly AboutCode Manager) is a JavaScript, Electron-based desktop
+application to review scan results and document your origin and license
+conclusions.</p></li>
+<li><p><a class="reference external" href="https://github.com/nexB/aboutcode-toolkit">AboutCode Toolkit</a> is a
+command line tool to document and inventory known packages and licenses
+and generate attribution docs, typically using the results of analyzed
+and reviewed scans.</p></li>
+<li><p><a class="reference external" href="https://github.com/nexB/tracecode-toolkit">TraceCode Toolkit</a> is
+a command line tool to find which source code file is used to create a
+compiled binary and trace and graph builds.</p></li>
+<li><p><a class="reference external" href="https://github.com/nexB/deltacode">DeltaCode</a> is a command line
+tool to compare scans and determine if and where there are material
+differences that affect licensing.</p></li>
+<li><p><a class="reference external" href="https://github.com/nexB/conan">ConAn</a> : a command line tool to analyze
+the code in Docker and container images</p></li>
+<li><p><a class="reference external" href="https://github.com/nexB/vulnerablecode">VulnerableCode</a> : an emerging
+server-side application to collect and track known package vulnerabilities.</p></li>
+<li><p><a class="reference external" href="https://github.com/nexB/license-expression/">license-expression</a> : a library
+to parse, analyze, simplify and render boolean license expression (such as SPDX)</p></li>
+</ul>
+<p>We also work closely, contribute and co-started several other orgs and projects:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/package-url">Package URL</a>  which is an emerging
+standard to reference software packages of all types with simple, readable and
+concise URLs.</p></li>
+<li><p><a class="reference external" href="http://SPDX.org">SPDX</a> aka. Software Package Data Exchange, a spec to
+document the origin and licensing of packages.</p></li>
+<li><p><a class="reference external" href="ClearlyDefined.io">ClearlyDefined</a> to review and help FOSS projects
+improve their licensing and documentation clarity.</p></li>
+</ul>
+</div>
+<div class="section" id="contact">
+<span id="contact-gsoc19"></span><h2>Contact<a class="headerlink" href="#contact" title="Permalink to this headline">¶</a></h2>
+<p>Join the chat online or by IRC at <a class="reference external" href="https://gitter.im/aboutcode-org/discuss">https://gitter.im/aboutcode-org/discuss</a>
+Introduce yourself and start the discussion!</p>
+<p>For personal issues, you can contact the primary org admin directly:
+&#64;pombredanne and <a class="reference external" href="mailto:pombredanne&#37;&#52;&#48;gmail&#46;com">pombredanne<span>&#64;</span>gmail<span>&#46;</span>com</a></p>
+<p>Please ask questions the smart way: <a class="reference external" href="http://www.catb.org/~esr/faqs/smart-questions.html">http://www.catb.org/~esr/faqs/smart-questions.html</a></p>
+</div>
+<div class="section" id="technology">
+<span id="technology-gsoc19"></span><h2>Technology<a class="headerlink" href="#technology" title="Permalink to this headline">¶</a></h2>
+<p>Discovering the origin of code is a vast topic. We primarily use Python for this
+and some C/C++ (and eventually some Rust and Go) for performance sensitive code and
+Electron/JavaScript for GUI.</p>
+<p>Our domain includes text analysis and processing (for instance for copyrights
+and licenses detection), parsing (for package manifest formats), binary analysis
+(to detect the origin and license of binaries, which source code they come from,
+etc.) as well as web based tools and APIs (to expose the tools and libraries as
+web services) and low-level data structures for efficient matching (such as Aho-
+Corasick and other automata).</p>
+</div>
+<div class="section" id="skills">
+<span id="skills-gsoc19"></span><h2>Skills<a class="headerlink" href="#skills" title="Permalink to this headline">¶</a></h2>
+<p>Incoming students will need the following skills:</p>
+<ul class="simple">
+<li><p>Intermediate to strong Python programming. For some projects, strong C/C++ and/or Rust is needed
+too.</p></li>
+<li><p>Familiarity with git as a version control system</p></li>
+<li><p>Ability to set up your own development environment</p></li>
+<li><p>An interest in FOSS licensing and software code and origin analysis</p></li>
+</ul>
+<p>We are happy to help you get up to speed, but the more you are able to demonstrate ability and
+skills in advance, the more likely we are to choose your application!</p>
+</div>
+<div class="section" id="about-your-project-application">
+<span id="about-your-project-application-gsoc19"></span><h2>About your project application<a class="headerlink" href="#about-your-project-application" title="Permalink to this headline">¶</a></h2>
+<p>We expect your application to be in the range of 1000 words. Anything less than
+that will probably not contain enough information for us to determine whether
+you are the right person for the job. Your proposal should contain at least the
+following information, plus anything you think is relevant:</p>
+<ul class="simple">
+<li><p>Your name</p></li>
+<li><p>Title of your proposal</p></li>
+<li><p>Abstract of your proposal</p></li>
+<li><p>Detailed description of your idea including explanation on why is it
+innovative and what it will contribute to the project</p>
+<ul>
+<li><p>hint: explain your data structures and you planned main processing flows in
+details.</p></li>
+</ul>
+</li>
+<li><p>Description of previous work, existing solutions (links to prototypes,
+bibliography are more than welcome)</p></li>
+<li><p>Mention the details of your academic studies, any previous work, internships</p></li>
+<li><p>Relevant skills that will help you to achieve the goal (programming languages,
+frameworks)?</p></li>
+<li><p>Any previous open-source projects (or even previous GSoC) you have contributed
+to and links.</p></li>
+<li><p>Do you plan to have any other commitments during GSoC that may affect your
+work? Any vacations/holidays? Will you be available full time to work on your
+project? (Hint: do not bother applying if this is not a serious full time
+commitment during the GSoC time frame)</p></li>
+</ul>
+<p>Join the chat online or by IRC at <a class="reference external" href="https://gitter.im/aboutcode-org/discuss">https://gitter.im/aboutcode-org/discuss</a>
+introduce yourself and start the discussion!</p>
+<p>The best way to demonstrate your capability would be to submit a small patch
+ahead of the project selection for an existing issue or a new issue.</p>
+<p>We will <strong>always</strong> consider and prefer a project submissions where you have
+submitted a patch over any other submission without a patch.</p>
+<p>You can pick any project idea from the list below. If you have other ideas that
+are not in this list, contact the team first to make sure it makes sense.</p>
+</div>
+<div class="section" id="our-project-ideas">
+<span id="our-project-ideas-gsoc19"></span><h2>Our Project ideas<a class="headerlink" href="#our-project-ideas" title="Permalink to this headline">¶</a></h2>
+<p>Here is a list of candidate project ideas for your consideration. Your own ideas
+are welcomed too! Please chat about them to increase your chances of success!</p>
+<div class="section" id="scancode-ideas">
+<h3>ScanCode ideas<a class="headerlink" href="#scancode-ideas" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="improve-copyright-detection-accuracy-and-speed-in-scancode">
+<span id="id1"></span><h4><strong>Improve Copyright detection accuracy and speed in ScanCode</strong><a class="headerlink" href="#improve-copyright-detection-accuracy-and-speed-in-scancode" title="Permalink to this headline">¶</a></h4>
+<p>Copyright detection is reasonably good by the slowest scanner in ScanCode.
+It is based on NLTK part of speech (PoS) tagging and a copyright grammar.
+The exact start and end lines where a copyright is found are approximate.</p>
+<p>The goal of this project is to refactor Copyright detection for speed and
+simplicity possibly implementing a new parser (PEG?, etc.) or re-implementing
+core elements in Rust with a Python binding for speed or using a fork of NLTK
+or any other tool to be faster and more accurate.</p>
+<p>This would include also keeping track of line numbers and offsets where
+copyrights are found.</p>
+<p>Also we detect copyrights that are part of a standard license text (e.g. FSF
+copyright in a GPL text) and we should be able to filter these out.</p>
+<ul class="simple">
+<li><p><strong>Level</strong></p>
+<ul>
+<li><p>Advanced</p></li>
+</ul>
+</li>
+<li><p><strong>Tech</strong></p>
+<ul>
+<li><p>Python, Rust, Go?</p></li>
+</ul>
+</li>
+<li><p><strong>URLS</strong></p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-toolkit/tree/develop/src/cluecode">https://github.com/nexB/scancode-toolkit/tree/develop/src/cluecode</a></p></li>
+</ul>
+</li>
+<li><p><strong>Mentors</strong></p>
+<ul>
+<li><p>&#64;JonoYang <a class="reference external" href="https://github.com/JonoYang">https://github.com/JonoYang</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="port-scancode-to-python-3">
+<span id="port-scancode-to-python-3-gsoc-2019"></span><h4><strong>Port ScanCode to Python 3</strong><a class="headerlink" href="#port-scancode-to-python-3" title="Permalink to this headline">¶</a></h4>
+<p>ScanCode runs only on Python 2.7 today. The goal of this project is to port
+ScanCode to support both Python 2 and Python 3.</p>
+<ul class="simple">
+<li><p><strong>Level</strong></p>
+<ul>
+<li><p>Intermediate to Advanced</p></li>
+</ul>
+</li>
+<li><p><strong>Tech</strong></p>
+<ul>
+<li><p>Python, C/C++, Go (for native code)</p></li>
+</ul>
+</li>
+<li><p><strong>URLS</strong></p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-toolkit/issues/295">https://github.com/nexB/scancode-toolkit/issues/295</a></p></li>
+</ul>
+</li>
+<li><p><strong>Mentors</strong></p>
+<ul>
+<li><p>&#64;majurg <a class="reference external" href="https://github.com/majurg">https://github.com/majurg</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="improve-programming-language-detection-and-classification-in-scancode">
+<span id="id2"></span><h4><strong>Improve Programming language detection and classification in ScanCode</strong><a class="headerlink" href="#improve-programming-language-detection-and-classification-in-scancode" title="Permalink to this headline">¶</a></h4>
+<p>ScanCode programming language detection is not as accurate as it could be and
+this is important to get this right to drive further automation. We also need to
+automatically classify each file in facets when possible.</p>
+<p>The goal of this project is to improve the quality of programming language
+detection (which is using only Pygments today and could use another tool, e.g.
+some Bayesian classifier like Github linguist, enry ?). And to create and
+implement a flexible framework of rules to automate assigning files to facets
+which could use some machine learning and classifier.</p>
+<ul class="simple">
+<li><p><strong>Level</strong></p>
+<ul>
+<li><p>Intermediate to Advanced</p></li>
+</ul>
+</li>
+<li><p><strong>Tech</strong></p>
+<ul>
+<li><p>Python</p></li>
+</ul>
+</li>
+<li><p><strong>URLS</strong></p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-toolkit/issues/426">https://github.com/nexB/scancode-toolkit/issues/426</a></p></li>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-toolkit/issues/1012">https://github.com/nexB/scancode-toolkit/issues/1012</a></p></li>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-toolkit/issues/1036">https://github.com/nexB/scancode-toolkit/issues/1036</a></p></li>
+</ul>
+</li>
+<li><p><strong>Mentors</strong></p>
+<ul>
+<li><p>&#64;pombredanne <a class="reference external" href="https://github.com/pombredanne">https://github.com/pombredanne</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="improve-license-detection-accuracy-and-speed-in-scancode">
+<span id="id3"></span><h4><strong>Improve License detection accuracy and speed in ScanCode</strong><a class="headerlink" href="#improve-license-detection-accuracy-and-speed-in-scancode" title="Permalink to this headline">¶</a></h4>
+<p>ScanCode license detection is using a sophisticated set of techniques
+base on automatons, inverted indexes and sequence matching. There are some cases
+where license detection accuracy could be improved (such as when scanning long
+notices). Other improvements would be welcomed to ensure the proper detected
+license text is collected in an improved way. Dealing with large files sometimes
+trigger a timeout and handling these cases would be needed too (by breaking files
+in chunks). The detection speed could also be improved possibly by porting
+some critical code sections to C or Rust and that would need extensive profiling.</p>
+<ul class="simple">
+<li><p><strong>Level</strong></p>
+<ul>
+<li><p>Advanced</p></li>
+</ul>
+</li>
+<li><p><strong>Tech</strong></p>
+<ul>
+<li><p>Python, C/C++, Rust, Go</p></li>
+</ul>
+</li>
+<li><p><strong>Mentors</strong></p>
+<ul>
+<li><p>&#64;mjherzog <a class="reference external" href="https://github.com/mjherzog">https://github.com/mjherzog</a></p></li>
+<li><p>&#64;pombredanne <a class="reference external" href="https://github.com/pombredanne">https://github.com/pombredanne</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="improve-scancode-scan-summarization-and-deduction">
+<span id="id4"></span><h4><strong>Improve ScanCode scan summarization and deduction</strong><a class="headerlink" href="#improve-scancode-scan-summarization-and-deduction" title="Permalink to this headline">¶</a></h4>
+<p>The goal of this project is to take existing scan results and infer
+summaries and perform some deduction of license and origin at a higher level,
+such as the licensing or origin of a whole directory tree. The ultimate goal is
+to automate the conclusion of a license and origin based on scans.
+This could include using statistics and machine learning techniques such as
+classifiers where relevant and efficient.</p>
+<p>This should be implemented as a set of ScanCode plugins and further the
+summarycode module plugins.</p>
+<ul class="simple">
+<li><p><strong>Level</strong></p>
+<ul>
+<li><p>Advanced</p></li>
+</ul>
+</li>
+<li><p><strong>Tech</strong></p>
+<ul>
+<li><p>Python (Rust and Go welcomed too)</p></li>
+</ul>
+</li>
+<li><p><strong>URLS</strong></p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-toolkit/issues/426">https://github.com/nexB/scancode-toolkit/issues/426</a></p></li>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-toolkit/issues/377">https://github.com/nexB/scancode-toolkit/issues/377</a></p></li>
+</ul>
+</li>
+<li><p><strong>Mentors</strong></p>
+<ul>
+<li><p>&#64;pombredanne <a class="reference external" href="https://github.com/pombredanne">https://github.com/pombredanne</a></p></li>
+<li><p>&#64;JonoYang <a class="reference external" href="https://github.com/JonoYang">https://github.com/JonoYang</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="create-linux-distros-and-freebsd-packages-for-scancode">
+<span id="id5"></span><h4><strong>Create Linux distros and FreeBSD packages for ScanCode</strong>.<a class="headerlink" href="#create-linux-distros-and-freebsd-packages-for-scancode" title="Permalink to this headline">¶</a></h4>
+<p>The goal of this project is to ensure that we have proper packages for Linux
+distros and FreeBSD for ScanCode.</p>
+<p>The first step is to debundle pre-built binaries that exist in ScanCode such
+that they come either from system-packages or pre-built Python wheels. This
+covers libarchive, libmagic and a few other native libraries and has been
+recently completed.</p>
+<p>The next step is to ensure that all the dependencies from ScanCode are also
+available as distro packages.</p>
+<p>The last step is to create proper distro packages for RPM, Debian, FreeBSD and
+as many other distros such as Nix and GUIX, Alpine, Arch and Gentoo (and possibly
+also AppImage.org packages and Docker images) and submit these package to the distros.</p>
+<p>As a bonus, the same could then be done for AboutCode toolkit and TraceCode.</p>
+<p>This requires a good understanding of packaging and Python.</p>
+<ul class="simple">
+<li><p><strong>Level</strong></p>
+<ul>
+<li><p>Intermediate to Advanced</p></li>
+</ul>
+</li>
+<li><p><strong>Tech</strong></p>
+<ul>
+<li><p>Python, Linux, C/C++ for native code</p></li>
+</ul>
+</li>
+<li><p><strong>URLS</strong></p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-toolkit/issues/487">https://github.com/nexB/scancode-toolkit/issues/487</a></p></li>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-toolkit/issues/469">https://github.com/nexB/scancode-toolkit/issues/469</a></p></li>
+</ul>
+</li>
+<li><p><strong>Mentor</strong></p>
+<ul>
+<li><p>&#64;pombredanne <a class="reference external" href="https://github.com/pombredanne">https://github.com/pombredanne</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="deltacode-projects">
+<span id="id6"></span><h3>DeltaCode projects<a class="headerlink" href="#deltacode-projects" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="approximately-similar-file-detection-in-deltacode">
+<h4><strong>Approximately Similar file detection in DeltaCode</strong><a class="headerlink" href="#approximately-similar-file-detection-in-deltacode" title="Permalink to this headline">¶</a></h4>
+<p>DeltaCode is a tool to compare and report scan differences.
+When comparing files, it only uses exact comparison.
+The goal of this project is to improve the usefulness of the delta by also
+finding files that are mostly the same (e.g. quasi or nrea duplicates) vs. files
+that are completely different. Then the DeltaCode comparison core should be
+updated accordingly to detect and report material changes to scans (such as
+new, update or removed licenses, origins and packages) when changes are also
+meterial in the code files (e.g. such that small changes may be ignored)</p>
+<ul class="simple">
+<li><p><strong>Level</strong></p>
+<ul>
+<li><p>Intermediate to Advanced</p></li>
+</ul>
+</li>
+<li><p><strong>Tech</strong></p>
+<ul>
+<li><p>Python</p></li>
+</ul>
+</li>
+<li><p><strong>URLS</strong></p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/nexB/deltacode/">https://github.com/nexB/deltacode/</a></p></li>
+</ul>
+</li>
+<li><p><strong>Mentors</strong></p>
+<ul>
+<li><p>&#64;majurg <a class="reference external" href="https://github.com/majurg">https://github.com/majurg</a></p></li>
+<li><p>&#64;johnmhoran <a class="reference external" href="https://github.com/johnmhoran">https://github.com/johnmhoran</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="tracecode-projects">
+<span id="id7"></span><h3>TraceCode projects<a class="headerlink" href="#tracecode-projects" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="static-analysis-of-binaries-for-build-tracing-in-tracecode">
+<h4><strong>Static analysis of binaries for build tracing in TraceCode</strong><a class="headerlink" href="#static-analysis-of-binaries-for-build-tracing-in-tracecode" title="Permalink to this headline">¶</a></h4>
+<p>TraceCode does system call tracing only today. The primary goal of this project
+is to create a tool that provides the same results as the strace-based tracing
+but would be using using ELF symbols, DWARF debug symbols, signatures or string
+matching to  determine when and how a source code file is built in a binary
+using only a static analysis. The primary target should be Linux executables,
+though the code should be designed to be extensible to Windows PE and macOS Dylib and exes.</p>
+<ul class="simple">
+<li><p><strong>Level</strong></p>
+<ul>
+<li><p>Advanced</p></li>
+</ul>
+</li>
+<li><p><strong>Tech</strong></p>
+<ul>
+<li><p>Python, Linux, ELFs, DWARFs, symbols, reversing</p></li>
+</ul>
+</li>
+<li><p><strong>URLS</strong></p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/nexB/tracecode-toolkit">https://github.com/nexB/tracecode-toolkit</a> for the existing non-static tool</p></li>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-toolkit-contrib">https://github.com/nexB/scancode-toolkit-contrib</a> for some work in progress on binaries/symbols
+parsers/extractors</p></li>
+</ul>
+</li>
+<li><p><strong>Mentor</strong></p>
+<ul>
+<li><p>&#64;pombredanne <a class="reference external" href="https://github.com/pombredanne">https://github.com/pombredanne</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="improve-dynamic-build-tracing-in-tracecode">
+<h4><strong>Improve dynamic build tracing in TraceCode</strong><a class="headerlink" href="#improve-dynamic-build-tracing-in-tracecode" title="Permalink to this headline">¶</a></h4>
+<p>TraceCode does system call tracing and relies on kernel-space system calls and
+in particular tracing file descriptors. This project should improve the tracing
+of the lifecycle of file descriptors when tracing a build with strace. We need
+to improve how TraceCode does system call tracing by improving the way we track
+open/close file descriptors in the trace to reconstruct the lifecycle of a traced
+file. This requires to understand and dive if the essence of system calls and
+file lifecycle from a kernel point of view and build datastructure and code
+to reconstruct user-space file activity from the kernel traces along a timeline.</p>
+<p>This project also would cover updating TraceCode to use the Click command
+line toolkit (like for ScanCode).</p>
+<ul class="simple">
+<li><p><strong>Level</strong></p>
+<ul>
+<li><p>Advanced</p></li>
+</ul>
+</li>
+<li><p><strong>Tech</strong></p>
+<ul>
+<li><p>Python, Linux kernel, system calls</p></li>
+</ul>
+</li>
+<li><p><strong>URLS</strong></p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/nexB/tracecode-toolkit">https://github.com/nexB/tracecode-toolkit</a> for the existing non-static tool</p></li>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-toolkit-contrib">https://github.com/nexB/scancode-toolkit-contrib</a> for the work in progress on binaries/symbols
+parsers/extractors</p></li>
+</ul>
+</li>
+<li><p><strong>Mentor</strong></p>
+<ul>
+<li><p>&#64;pombredanne <a class="reference external" href="https://github.com/pombredanne">https://github.com/pombredanne</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="conan-and-other-projects">
+<span id="id8"></span><h3>Conan and Other projects<a class="headerlink" href="#conan-and-other-projects" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="containers-and-vm-images-static-package-analysis">
+<h4><strong>Containers and VM images static package analysis</strong><a class="headerlink" href="#containers-and-vm-images-static-package-analysis" title="Permalink to this headline">¶</a></h4>
+<p>The goal of this project is to further the Conan container static analysis tool
+to effectively support proper inventory of installed packages without running
+the containers.</p>
+<p>This includes determining which packages are installed in Docker layers for
+RPMs, Debian or Alpine Linux in a static way. And this may eventually require
+the integration with ScanCode.</p>
+<ul class="simple">
+<li><p><strong>Level</strong></p>
+<ul>
+<li><p>Advanced</p></li>
+</ul>
+</li>
+<li><p><strong>Tech</strong></p>
+<ul>
+<li><p>Python, Go, containers, distro package managers, RPM, Debian, Alpine</p></li>
+</ul>
+</li>
+<li><p><strong>URLS</strong></p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/nexB/conan">https://github.com/nexB/conan</a></p></li>
+</ul>
+</li>
+<li><p><strong>Mentor</strong></p>
+<ul>
+<li><p>&#64;JonoYang <a class="reference external" href="https://github.com/JonoYang">https://github.com/JonoYang</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="dependentcode-a-mostly-universal-package-dependencies-resolver">
+<h4><strong>DependentCode: a mostly universal Package dependencies resolver</strong><a class="headerlink" href="#dependentcode-a-mostly-universal-package-dependencies-resolver" title="Permalink to this headline">¶</a></h4>
+<p>The goal of this project is to create a tool for a universal package
+dependencies resolution using a SAT solver that should leverage the detected
+packages from ScanCode and the Package URLs and could provide a good enough way
+to resolve package dependencies for many system and application package formats.
+This is a green field project.</p>
+<ul class="simple">
+<li><p><strong>Level</strong></p>
+<ul>
+<li><p>Advanced</p></li>
+</ul>
+</li>
+<li><p><strong>Tech</strong></p>
+<ul>
+<li><p>Python, C/C++, Rust, SAT</p></li>
+</ul>
+</li>
+<li><p><strong>URLS</strong></p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/package-url">https://github.com/package-url</a></p></li>
+<li><p><a class="reference external" href="https://fosdem.org/2018/schedule/event/purl/">https://fosdem.org/2018/schedule/event/purl/</a></p></li>
+<li><p><a class="reference external" href="https://github.com/heremaps/oss-review-toolkit">https://github.com/heremaps/oss-review-toolkit</a></p></li>
+</ul>
+</li>
+<li><p><strong>Mentors</strong></p>
+<ul>
+<li><p>&#64;pombredanne <a class="reference external" href="https://github.com/pombredanne">https://github.com/pombredanne</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="vulnerablecode-package-security-vulnerability-correlated-data-feed">
+<h4><strong>VulnerableCode Package security vulnerability correlated data feed</strong><a class="headerlink" href="#vulnerablecode-package-security-vulnerability-correlated-data-feed" title="Permalink to this headline">¶</a></h4>
+<p>This project is to futher and evolve the VulnerableCode server and software
+package vulnerabilities data aggregator.</p>
+<p>VulnerableCode was started as a GSoC project in 2017. Its goal is to
+collect, aggregate and correlate vulnerabilities data and provide semi-automatic
+correlation. In the end it should provide the basis to report vulnerabilities
+alerts found in packages identified by ScanCode.</p>
+<p>This is not trivial as there are several gaps in the CVE data and how they
+relate to packages as they are detected by ScanCode or else.</p>
+<p>The features and TODO for this updated server would be:</p>
+<ul>
+<li><p>Aggregate more and new packages vulnerabilities feeds,</p></li>
+<li><p>Automating correlation: add smart relationship detection to infer new
+relatiosnhips between available packages and vulnerabilities from mining the
+graph of existing relations.</p></li>
+<li><p>Create a ScanCode plugin to report vulnerabilities with detected packages
+using this data.</p></li>
+<li><p>Integrate API lookup on the server withe the AboutCode Manager UI</p></li>
+<li><p>Create a UI and model for community curation of vulnerability to package
+mappings, correlations and enhancements.</p></li>
+<li><p><strong>Level</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Advanced</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Tech</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Python, Django</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>URLS</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://github.com/nexB/vulnerablecode">https://github.com/nexB/vulnerablecode</a></p></li>
+<li><p><a class="reference external" href="https://github.com/nexB/aboutcode-manager">https://github.com/nexB/aboutcode-manager</a></p></li>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-toolkit">https://github.com/nexB/scancode-toolkit</a></p></li>
+<li><p>Other interesting pointers:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/cve-search/cve-search">https://github.com/cve-search/cve-search</a></p></li>
+<li><p><a class="reference external" href="https://github.com/jeremylong/DependencyCheck/">https://github.com/jeremylong/DependencyCheck/</a></p></li>
+<li><p><a class="reference external" href="https://github.com/victims/victims-cve-db">https://github.com/victims/victims-cve-db</a></p></li>
+<li><p><a class="reference external" href="https://github.com/rubysec/ruby-advisory-db">https://github.com/rubysec/ruby-advisory-db</a></p></li>
+<li><p><a class="reference external" href="https://github.com/future-architect/vuls">https://github.com/future-architect/vuls</a></p></li>
+<li><p><a class="reference external" href="https://github.com/coreos/clair">https://github.com/coreos/clair</a></p></li>
+<li><p><a class="reference external" href="https://github.com/anchore/anchore/">https://github.com/anchore/anchore/</a></p></li>
+<li><p><a class="reference external" href="https://github.com/pyupio/safety-db">https://github.com/pyupio/safety-db</a></p></li>
+<li><p><a class="reference external" href="https://github.com/RetireJS/retire.js">https://github.com/RetireJS/retire.js</a></p></li>
+<li><p>and many more including Linux distro feeds</p></li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Mentors</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>&#64;majurg <a class="reference external" href="https://github.com/majurg">https://github.com/majurg</a></p></li>
+<li><p>&#64;JonoYang <a class="reference external" href="https://github.com/JonoYang">https://github.com/JonoYang</a></p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="high-volume-matching-automatons-and-data-structures">
+<h4><strong>High volume matching automatons and data structures</strong><a class="headerlink" href="#high-volume-matching-automatons-and-data-structures" title="Permalink to this headline">¶</a></h4>
+<p>Finding similar code is a way to detect the origin of code against an index of
+open source code.</p>
+<p>To enable this, we need to research and create efficient and compact data
+structures that are specialized for the type of data we lookup. Given the volume
+to consider (typically multi billion values indexed) there are special
+considerations to have compact and memory efficient dedicated structures (rather
+than using a general purpose DB or Key/value pair store) that includes looking
+at automata, and memory mapping. This types of data structures should be
+implemented in Rust as a preference (though C/C++ is OK) and include Python
+bindings.</p>
+<p>There are several areas to research and prototype such as:</p>
+<ul class="simple">
+<li><p>A data structure to match efficiently a batch of fix-width checksums (e.g.
+SHA1) against a large index of such checksums, where each checksum points to
+one or more files or packages. A possible direction is to use finite state
+transducers, specialized B-tree indexes, blomm-like filters. Since when a
+codebase is being matched there can be millions of lookups to do, the batch
+matching is preferred.</p></li>
+<li><p>A data structure to match efficiently a batch of fix-width byte strings (e.g.
+LSH) against a large index of such LSH within a fixed hamming distance, where
+each points to one or more files or packages. A possible direction is to use
+finite state transducers (possibly weighted), specialized B-tree indexes or
+multiple hash-like on-disk tables.</p></li>
+<li><p>A memory-mapped Aho-Corasick automaton to build large batch tree matchers.
+Available Aho-Corasick automatons may not have a Python binding or may not allow
+memory-mapping (like pyahocorasick we use in ScanCode). The volume of files we
+want to handle requires to reuse, extend or create specialized tree/paths
+matching automatons that can handle eventually billions of nodes and are larger
+than the available memory. A possible direction is to use finite state
+transducers (possibly weighted).</p></li>
+<li><p>Feature hashing research: we deal with many “features” and hashing to limit
+the number and size of the each features seems to be a valuable thing. The goal
+is to research the validaty of feature hashing with short hashes (15, 16 and
+32 bits) and evaluate if this leads to acceptable false-positive and loss of
+accuracy in the context of the data structures mentioned above.</p></li>
+</ul>
+<p>Then using these data structures, the project should create a system for
+matching code as a Python-based server exposing a simple API.
+This is a green field project.</p>
+<ul class="simple">
+<li><p><strong>Level</strong></p>
+<ul>
+<li><p>Advanced</p></li>
+</ul>
+</li>
+<li><p><strong>Tech</strong></p>
+<ul>
+<li><p>Rust, Python</p></li>
+</ul>
+</li>
+<li><p><strong>URLS</strong></p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-toolkit-contrib">https://github.com/nexB/scancode-toolkit-contrib</a> for samecode fingerprints drafts.</p></li>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-toolkit">https://github.com/nexB/scancode-toolkit</a> for commoncode hashes</p></li>
+</ul>
+</li>
+<li><p><strong>Mentors</strong></p>
+<ul>
+<li><p>&#64;pombredanne <a class="reference external" href="https://github.com/pombredanne">https://github.com/pombredanne</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="mentoring">
+<span id="mentoring-gsoc19"></span><h2>Mentoring<a class="headerlink" href="#mentoring" title="Permalink to this headline">¶</a></h2>
+<p>We welcome new mentors to help with the program and require some good unerstanding of the project
+codebase and domain to join as a mentor. Contact the team on Gitter.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="writing_good_commit_messages.html" class="btn btn-neutral float-right" title="Writing good Commit Messages" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="gsoc_2018.html" class="btn btn-neutral float-left" title="Google Summer of Code 2018" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, AyanSinha
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

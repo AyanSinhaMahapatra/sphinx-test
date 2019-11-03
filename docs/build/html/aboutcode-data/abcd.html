@@ -1,0 +1,1305 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>AboutCode Data : ABCD &mdash; sphinx-test-1.0 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Help" href="../help.html" />
+    <link rel="prev" title="ABOUT File Specification v3.1.2" href="../aboutcode-toolkit/specification.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> sphinx-test-1.0
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../scancode-workbench/index.html"><strong>Scancode-Workbench Documentation</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deltacode/index.html"><strong>Deltacode Documentation</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aboutcode-docs/home.html">AboutCode Docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aboutcode-toolkit/index.html"><strong>AboutCode-Toolkit Documentation</strong></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">AboutCode Data : ABCD</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#context">Context</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#abcd-the-aboutcode-data-structure">ABCD: the AboutCode Data structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#basic-objects-describing-data-about-code">Basic objects describing data about code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#attribute-names-and-values">Attribute Names and Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#name-conventions">Name conventions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#value-conventions">Value conventions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#object-identifiers">Object identifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#organizing-data-and-relationships">Organizing data and relationships</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#document-format-conventions">Document format conventions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#references-between-documents-and-payload-embedding-other-files">References between documents and payload, embedding other files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#document-as-files-naming-exchange-and-storage">Document-as-files naming, exchange and storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#documenting-and-validating-attributes">Documenting and validating attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#notes-on-yaml-format">Notes on YAML format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#notes-on-json-format">Notes on JSON Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#notes-on-embedding-abc-data-in-source-code-files">Notes on embedding ABC Data in source code files.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#notes-on-spreadsheet-and-csv-files">Notes on spreadsheet and CSV files</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#impact-on-attributecode">Impact on AttributeCode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#impact-on-scancode-toolkit">Impact on ScanCode Toolkit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#aboutcode-manager">AboutCode Manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#new-and-future-tools">New and Future tools</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc_maintenance.html">Document Maintenance</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">sphinx-test-1.0</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>AboutCode Data : ABCD</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/aboutcode-data/abcd.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="aboutcode-data-abcd">
+<span id="aboutcode-data"></span><h1>AboutCode Data : ABCD<a class="headerlink" href="#aboutcode-data-abcd" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>ABCD is an abbreviation for ABout Code Data. The AboutCode Data goal is
+to provide a simple, standardized and extensible way to document data
+about software code such that:</p>
+<ul class="simple">
+<li><p>It is a common way to exchange data about code between any nexB tools
+by import and export.</p></li>
+<li><p>It becomes the preferred way to exchange data between nexB tools and
+other tools.</p></li>
+<li><p>It could become a valuable structure to exchange data between any
+tools concerned with data about software.</p></li>
+</ul>
+<p>ABCD is technology and programming language neutral, preferring JSON or
+YAML document formats.</p>
+<p>ABC Data is structured around a few basic objects: Products, Components,
+Packages, Files, Parties and Licenses. It is extensible to other
+specific or future object types.</p>
+<p>Objects have “attributes” that are simple name/value pairs. A value can
+be either a plain value or another object or a list of objects and
+attributes.</p>
+<p>ABC Data is minimally specified by design: only a few basic objects and
+attributes are documented with conventions to name and structure data
+and how to define relationships between objects. There is only a small
+reference dictionary for some well known attributes documented here.</p>
+<p>The planned benefit for tools using ABC Data is simplified data exchange
+and integration between multiple best-of-breed tools.</p>
+</div>
+<div class="section" id="context">
+<h2>Context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h2>
+<p>There is currently no easy way to describe information about code and
+software in a simple and standardized way. There have been many efforts
+to provide this data in a more structured way such as:</p>
+<ul class="simple">
+<li><p>SPDX (focused on packages and licenses),</p></li>
+<li><p>DOAP (focused on projects),</p></li>
+<li><p>The original ABOUT metafile format, and</p></li>
+<li><p>The many different software package metadata formats (Maven, NPM,
+RPM, Deb, etc).</p></li>
+</ul>
+<p>These data structures are fragmented and generally too purpose- or
+technology-specific.</p>
+<p>Recently there have been efforts to collect and expose more data such
+as:</p>
+<ul class="simple">
+<li><p>libraries.io (a catalog of packages, AGPL-licensed)
+and dependencyci.com its companion commercial service,</p></li>
+<li><p>versioneye.com (a catalog of package versions updates, now
+MIT-licensed),</p></li>
+<li><p>softwarearchive.org (an effort to build an all-encompassing software
+source code archive),</p></li>
+<li><p>sources.debian.net (a Debian-focused code and metadata search
+facility),</p></li>
+<li><p>searchcode.com (an add-supported source code search engine exposing
+some metadata)</p></li>
+<li><p>appstream (a cross-distro effort to normalize desktop package
+metadata access to Linux desktops
+<a class="reference external" href="https://www.freedesktop.org/software/appstream/docs/">https://www.freedesktop.org/software/appstream/docs/</a>).</p></li>
+</ul>
+<p>These efforts are all useful, but they do not address how you can
+consistently exchange data about code in a user-centric and
+technology-neutral, normalized way.</p>
+<p>Why does this matter? Software and code are everywhere. FLOSS code is
+exploding with millions of components and packages. The data about this
+code is out there somewhere but getting it is often too difficult. This
+is a problem of data normalization, aggregation and exchange.</p>
+<p>Whether you consume or produce software, accessing and creating
+normalized data about your code and the code you use should be made
+easier such that:</p>
+<ul class="simple">
+<li><p>You can efficiently make code selection and re-use decisions,</p></li>
+<li><p>You can discover what is in your code, and</p></li>
+<li><p>You can continuously track updates, bugs, licenses, liveliness,
+quality and security attributes of the code you use or consider
+using.</p></li>
+</ul>
+<p>With the notable exceptions of SPDX and the earlier versions of the
+ABOUT format, available data formats about software have been designed
+first for a specific technology (e.g. Linux distros) or programming
+language (e.g. maven, npm, etc.) and documentation of code provenance
+and related attributes has been secondary and minimal. In most cases,
+the primary focus has been to provide first comprehensive support for
+package installation, dependency resolution or package building and
+provenance and licensing information is often treated with lesser
+details.</p>
+</div>
+<div class="section" id="abcd-the-aboutcode-data-structure">
+<h2>ABCD: the AboutCode Data structure<a class="headerlink" href="#abcd-the-aboutcode-data-structure" title="Permalink to this headline">¶</a></h2>
+<p>ABCD is an abbreviation for ABout Code Data. The goal is to provide a
+simple, standardized and extensible way to document things about
+software code.</p>
+<p>In contrast with other approaches, the AboutCode Data structure is
+focused on providing data that is useful to users first and is not
+limited to software package data only. AboutCode Data need not
+be as strictly specified as traditional package manager data formats
+because its purpose is not to drive a software build, package creation
+or software installation nor is it to compute the resolution of
+dependencies. It only provides information (metadata) about the code.</p>
+<p>The vision for the ABC Data structure is to provide a common way to
+exchange data about code between all nexB tools, such that these tools
+can all import and export data about code seamlessly (TraceCode,
+ScanCode, AboutCode Manager, AttributeCode, upcoming MineCode, etc.).
+The ABCD structure should also be the preferred way to exchange data
+about code between nexB tools and other tools. We may create small
+adapters to convert other data formats in and out of the ABCD structure
+and encourage other tool authors to natively support ABC Data, though
+the main focus is on our tools.</p>
+<p>The ABCD structure is technology and programming language neutral and
+designed so that the parties exchanging data about code can do so
+reliably with some minimal conventions; and that the data is easily
+processed by machines and not hard to read by humans.</p>
+<p>ABC Data is structured around “objects”. Objects have “attributes” that
+are simple name/value pairs. A value can be either a plain value or
+another object or a list of nested objects and attributes.</p>
+<p>ABC Data is organized around:</p>
+<ul class="simple">
+<li><p>a few known object types,</p></li>
+<li><p>simple conventions to create lists of objects and describe object
+relationships,</p></li>
+<li><p>simple conventions to create attributes as name/value pairs, and</p></li>
+<li><p>a small dictionary or vocabulary of well-known attribute names that
+have a common definition across all tools.</p></li>
+</ul>
+<p>ABC Data is “under-specified” by design: only a few essential objects
+and attributes are documented here with the conventions on how to
+structure the ABC Data.</p>
+</div>
+<div class="section" id="basic-objects-describing-data-about-code">
+<h2>Basic objects describing data about code<a class="headerlink" href="#basic-objects-describing-data-about-code" title="Permalink to this headline">¶</a></h2>
+<p>At the top level we have these main object types:</p>
+<ul class="simple">
+<li><p>Product(s): a software product, application or system such as a Cost
+Accounting application.</p></li>
+<li><p>Component(s): a software component, such as the PostgreSQL 9 database
+system, usually a significant or major version</p></li>
+<li><p>Package(s): a set of files that comprise a Component as used, such as
+a postgresql-9.4.5-linux-x86.zip archive. The version is exact and
+specific.</p></li>
+<li><p>File(s): any file and directory identified by a path, such as a
+binary package or a source code directory or file.</p></li>
+</ul>
+<p>And these secondary, important but less prominent object types:</p>
+<ul class="simple">
+<li><p>Party(ies): a person or an organization. An organization can be a
+project, formally or informally organized, a company, a department
+within a company, etc. A Party typically has contact information
+(such as an email or physical address or home url). A Party may have
+defaults that apply to much of its software (for an org that creates
+software) such as a default Apache license for Apache Foundation
+projects. Parties often relate to other objects through a
+role relationship such as owner, author, maintainer, etc.</p></li>
+<li><p>License(s): information about the license of code. A License
+typically has a name, text and additional categories. (tags or
+attributes).</p></li>
+</ul>
+<p>Each of these objects has a few identifying attributes and eventually
+many tool- or application-specific data attributes. Each tool defines
+and documents the attributes they can handle and care for. When some
+agreement is reached on the definition of new attributes or objects, the
+ABCD dictionary may be updated accordingly with new objects types such
+as for software security, quality or other interesting aspects.</p>
+<p>Objects are interrelated with other objects. Objects can relate to each
+other via a reference using identifiers pointing to other objects or via
+an embedded list of objects. The nature of the relationship between two
+objects can also be specified with additional attributes as needed.</p>
+<p>Here are typical relationships between objects:</p>
+<p><img alt="image1" src="../_images/image00.png" /></p>
+<p>Here is an example of relationships for a simple Widget product:</p>
+<p><img alt="image2" src="../_images/image02.png" /></p>
+<p>Tools can define any custom objects and some used more commonly may be
+promoted to be documented here over time.</p>
+</div>
+<div class="section" id="attribute-names-and-values">
+<h2>Attribute Names and Values<a class="headerlink" href="#attribute-names-and-values" title="Permalink to this headline">¶</a></h2>
+<p>By convention, a tool receiving ABC Data should process only the data it
+knows and should ignore unknown attributes or objects. This is important
+to allow the data structure to evolve and provide some forward and
+backward compatibility. When an ABCD payload contains data elements that
+a receiver does not know about, the receiver should still be able to
+process the known objects and attributes.</p>
+<ul class="simple">
+<li><p>Attributes are name/value pairs.</p></li>
+<li><p>Attribute names are always strings, not numbers, not booleans, not any
+other data format. In these strings, leading and trailing white spaces
+(spaces, tabs, line returns, etc) are not significant and can be safely
+ignored or removed.</p></li>
+<li><p>Attribute values are one of the standard JSON types: string, number,
+boolean or null. In strings, leading and trailing white spaces (spaces,
+tabs, line returns, etc) are not significant and can be safely ignored
+or removed.</p></li>
+<li><p>Self-explicit names should be used rather than obscure names or
+abbreviations: names should be self-explicit and self-evident.</p></li>
+</ul>
+<p>Except for the data organization conventions described here and the use
+of the well-known object and attribute names, nothing is mandatory in
+the ABCD format. This means that even partial, incomplete or sketchy
+data about code can be transferred in this format.</p>
+<p>The meaning of well known object names such as Product, Component,
+Package, File, Party and License is defined in this document.</p>
+</div>
+<div class="section" id="name-conventions">
+<h2>Name conventions<a class="headerlink" href="#name-conventions" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>Names are strings composed ONLY of ASCII letters, numbers or
+underscores. Names cannot start with a number. Names cannot contain
+spaces nor other punctuation, not even a dot or period.</p></li>
+<li><p>Names are NOT case sensitive: upper or lowercase does not matter and
+the standard is to use lowercase. It is a mistake to use upper or
+mixed case but this is something a parser receiving ABC Data should
+recover from nicely by converting the names to lowercase.</p></li>
+<li><p>Names are made of English words: there is no provision currently for
+non-English names. Tools that deal with multilingual content may
+define their own conventions to provide content in other languages.
+ABCD may add one of these conventions in the future.</p></li>
+<li><p>Parser implementation can be smarter and gentler: For names, anything
+that is not ASCII or number or underscore can be accepted by a parser
+and could be replaced by an underscore, including a starting digit if
+any. Or a parser may provide a warning if there is an unknown name
+that is very close to a well known name. Or a parser may accept
+CamelCase and transform names to underscore_case and perform another
+transformation to conventional ABC Data.</p></li>
+<li><p>Names are singular or plural: When a name refers to more than one
+item, the name of the field is plural and the value is a list of
+values. For instance “url” and “urls”.</p></li>
+<li><p>Top level known objects are ALWAYS plural and stored in lists:
+“parties” or “files” or “products” or “components”. This makes it
+easier to write tools because the top level types are always lists,
+even when there is a single object in that list.</p></li>
+<li><p>A value must not be used as a name: in an attribute name/value pair,
+the name is always a name, not a value and every value must have a
+name.</p></li>
+<li><p>For instance, this JSON snippet would not be correct where a URL is
+used as a name:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;http://someurl.com&quot;</span><span class="p">:</span> <span class="s2">&quot;this is the home URL&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p>Use rather this form to specify a name for the URL attribute:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://someurl.com&quot;</span><span class="p">,</span> <span class="s2">&quot;note&quot;</span><span class="p">:</span> <span class="s2">&quot;this is the home URL&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p>But this would be correct when using a list of plain values where
+“urls” is plural:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;urls&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;http://someurl.com&quot;</span><span class="p">,</span> <span class="s2">&quot;http://someurl2.com&quot;</span><span class="p">]}</span>
+</pre></div>
+</div>
+</li>
+<li><p>An attribute names without a value is not needed. Only names with
+values are needed, and attributes without values can be omitted: each
+tool may do what it wants for these cases. For instance it may be handy
+to provide all attributes even if not defined in an API payload. But
+when serializing data as YAML, meant for human editing, including all
+empty values may not help with reading and processing the YAML text.
+An undefined attribute without a set value should be assigned with
+the null JSON value: this has the same meaning as if the attribute
+was not specified and absent from the payload. If you want to specify
+that an attribute has an empty value and does not have a value (as
+opposed to have an unknown value) use an empty string instead.</p></li>
+<li><p>Avoid abbreviated names, with some exceptions. Names should always be
+fully spelled out except for:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>url: uniform resource locator</p></li>
+<li><p>uri: uniform resource identifier</p></li>
+<li><p>urn: uniform resource name</p></li>
+<li><p>vcs: version control system</p></li>
+<li><p>uuid: universally unique identifier, used for uuid4 string
+<a class="reference external" href="https://tools.ietf.org/html/rfc4122.html&amp;sa=D&amp;ust=1487355496775000&amp;usg=AFQjCNFPvpqA_MFbGaOmykUF8a5GGUKRSw">https://tools.ietf.org/html/rfc4122.html</a></p></li>
+<li><p>id: identifier</p></li>
+<li><p>info: information</p></li>
+<li><p>os: operating system</p></li>
+<li><p>arch: architecture</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>For some common names we use the common compound form such as:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>codebase: and not code_base</p></li>
+<li><p>filename: and not file_name</p></li>
+<li><p>homepage: and not home_page</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p>Well known attribute names include:</p>
+<ul class="simple">
+<li><p>name: the name of a product, component, license or package.</p></li>
+<li><p>version: the version of a product, component, package.</p></li>
+<li><p>description: description text.</p></li>
+<li><p>type: some type information about an object. For instance, a File
+type could be: directory, file or link.</p></li>
+<li><p>keywords: a list of keywords about an object. For example, the
+keywords of a component used to “tag” a component.</p></li>
+<li><p>path: the value is the path to a file or directory, either absolute
+or relative and using the POSIX convention (a forward slash as
+separator). For Windows paths, replace backslash with forward
+slashes. Directories should end with a slash in a canonical form.</p></li>
+<li><p>key: the value is some key string, slug-like, case-insensitive and
+composed only of ASCII letters and digits, dash, dot and underscore.
+No white spaces. For example: org.apache.maven-parent</p></li>
+<li><p>role: the value describes the role of a Party in a relationship with
+other objects. For instance a Party may be the
+“owner” or “author” of a Component or Package.</p></li>
+<li><p>uuid: a uuid4 string
+<a class="reference external" href="https://tools.ietf.org/html/rfc4122.html">https://tools.ietf.org/html/rfc4122.html</a></p></li>
+<li><p>algorithms for checksums: to store checksums we use a name/value
+pairs where the name is an algorithm such as sha1 and the value is a
+checksum in hexadecimal such as “sha1”: “asasa231212” . The value is
+the standard/default string created by command line tools such as
+sha1sum. Supported algorithms may evolve over time. Common checksums
+include md5, sha1, sha256, sha512.</p></li>
+<li><p>notes: some text notes. This is an exception to the singular/plural
+rule for names: notes is a single text field and not a list.</p></li>
+</ul>
+<p>As the usage of the ABCD structure matures, more well known names will
+be documented in a vocabulary.</p>
+</div>
+<div class="section" id="value-conventions">
+<h2>Value conventions<a class="headerlink" href="#value-conventions" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Attribute values are one of the standard JSON types: string, number,
+boolean or null. In strings, leading and trailing white spaces
+(spaces, tabs, line returns, etc) are not significant and can be
+safely ignored or removed.</p></li>
+<li><p>To represent a date/time use the ISO format such as 2016-08-15
+defaulting to UTC time zone if the time zone is not specified in the
+date/time stamp.</p></li>
+<li><p>All string values are UTF-8 encoded.</p></li>
+</ul>
+<p>Well known name prefixes or suffixes can be used to provide a type hint
+for the value type or meaning:</p>
+<ul class="simple">
+<li><p>xxx_count, xxx_number, xxx_level: the value is an integer number.
+Example: results_count or curation_level</p></li>
+<li><p>date_xxx or xxx_date: the value is a date/time stamp in ISO format
+such as 2016-08-16 (See <a class="reference external" href="https://www.ietf.org/rfc/rfc3339.txt">https://www.ietf.org/rfc/rfc3339.txt</a> ).
+Examples: last_modified_date, date_created</p></li>
+<li><p>xxx_url: the value is a URL for web http(s) or ftp url that points
+to an existing valid web resource (that could possibly no longer
+exist on the web). Example: homepage_url or api_url</p></li>
+<li><p>xxx_uri: the value is a URI typically used as an identifier that may
+not point to an existing web resource. Example:
+git://github.com/nexb/scancode-toolkit</p></li>
+<li><p>xxx_file or xxx_path: the value is a file path. This can come handy
+for external files such as a license file. Example: notice_file</p></li>
+<li><p>xxx_filename: the value is a file name. Example: notice_filename</p></li>
+<li><p>xxx_text: the value is a long text. This is only a hint that it may
+be large and may span multiple lines. Example: notice_text</p></li>
+<li><p>xxx_line: such as start_line and end_line: the value is a line
+number. The first line number is 1.</p></li>
+<li><p>xxx_status: such as configuration_status. Indicates that the value
+is about some status.</p></li>
+<li><p>xxx_name: such as short_name. Indicates that the value is a name.
+Commonly used for long_name, short_name. The bare name shout be
+preferred for the obvious and most common way an object is named.</p></li>
+<li><p>xxx_flag, is_xxx, has_xxx: such as is_license_notice. Indicates
+that the string value is a boolean.</p></li>
+</ul>
+</div>
+<div class="section" id="object-identifiers">
+<h2>Object identifiers<a class="headerlink" href="#object-identifiers" title="Permalink to this headline">¶</a></h2>
+<p>We like objects to be identifiable. There is a natural way to identify
+and name most objects: for instance, the full name of a person or
+organization or the name and version of a Component or Package or the
+path to a File, are all natural identifiers to an object.</p>
+<p>However, natural names are not always enough to fully identify an object
+and may need extra context to reference an object unambiguously. There
+could be several persons or organizations with the same name at a
+different address. Or the foo-1.4 Package could be available as a
+public RubyGem and also as an NPM; or a private Python package foo-1.4
+has been created by a company and is also available on Pypi. Or the
+“foo” Package is the name of a Linux Package, an NPM and a Ruby Package
+but these three packages are for unrelated components.</p>
+<p>Hence each object may need several attributes to be fully identifiable.</p>
+<p>For example, public package managers ensure that a name is unique within
+the confines of a source. “logging” is the unique name of a single
+Sourceforge project at
+<a class="reference external" href="https://sourceforge.net/projects/logging/">https://sourceforge.net/projects/logging/</a>.
+“logging” is the unique name of an Apache project at the Apache
+Foundation <a class="reference external" href="http://logging.apache.org/">http://logging.apache.org/</a>.</p>
+<p>Yet, these two names point to completely different software. In most
+cases, providing information about the “source” where an identifier is
+guaranteed to be unique is enough to ensure proper identification. This
+“source” is easily identified by its internet source name, and an
+internet source name is guaranteed to be unique globally. The “source”
+of identifiers is not mandatory but it is strongly encouraged to use as
+an attribute to provide good unique identifiers. Still, tools exchanging
+ABC Data must be able to exchange under-specified and partially
+identified data and may sometimes rely on comparing many attributes of
+two objects to decide if they are the same.</p>
+<p>The minimal way to identify top level objects is the combination of a
+“source” and a unique identifier within this source. The source can be
+implicit when two parties are exchanging data privately or explicit
+using the “source” attribute.</p>
+<p>Within a source, we use the most obvious and natural identifies for an
+object. For example:</p>
+<ul class="simple">
+<li><p>For Products, Components and Packages we can use their name and
+version.</p></li>
+<li><p>For Files we use a path of a file or directory, possibly relative to
+a package or a product codebase; or a checksum of a file or archive
+such as a sha1.</p></li>
+<li><p>For Parties, we use a name possibly supplemented with a URL or email.</p></li>
+<li><p>For all object types we can use a “universally unique id” or UUID-4
+(<a class="reference external" href="https://tools.ietf.org/html/rfc4122.html">https://tools.ietf.org/html/rfc4122.html</a>)</p></li>
+<li><p>For all object types, we can use a key, which is a slug-like string
+identifier such as a license key.</p></li>
+<li><p>For all object types, we can use a URN
+(<a class="reference external" href="https://en.wikipedia.org/wiki/Uniform_resource_name">https://en.wikipedia.org/wiki/Uniform_resource_name</a>) Tools may
+also define their own URNs, namespaces and names such as a DejaCode
+urn is, <a class="reference external" href="urn:dje:component:16fusb:1.0">urn:dje:component:16fusb:1.0</a></p></li>
+</ul>
+<p>Beyond direct identification, an object may have several alternative
+identifiers, aka “external references”. For instance a Package may have
+different names and slightly different versions in the Linux, Debian or
+Fedora distros and a Pypi Package with yet another name where all these
+Packages are for the same Component and the same code. Or a Party such
+as the Eclipse Foundation may be named differently in DejaCode and the
+NVD CPEs.</p>
+<p>To support these cases, the “external_reference(s)” attribute can be
+used where needed in any object to reference one or more external
+identifiers and what is the source for this identifier (note: “external”
+is really a matter of point of view of who owns or produces the ABC
+Data).  An attribute with name suffix of “xxx_reference” may also be
+used to provide a simpler external reference, such as “approval_reference”.</p>
+<p>For example, this ABC Data could describe the external id of Party to a
+CPE and to TechnoPedia (here in a YAML format):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">parties</span><span class="p">:</span>
+  <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">Apache</span> <span class="n">Foundation</span>
+    <span class="n">homepage_url</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">apache</span><span class="o">.</span><span class="n">org</span>
+    <span class="nb">type</span><span class="p">:</span> <span class="n">organization</span>
+    <span class="n">external_references</span><span class="p">:</span>
+        <span class="o">-</span> <span class="n">source</span><span class="p">:</span> <span class="n">nvd</span><span class="o">.</span><span class="n">nist</span><span class="o">.</span><span class="n">gov</span>
+          <span class="n">identifier</span><span class="p">:</span> <span class="n">apache</span>
+        <span class="o">-</span> <span class="n">source</span><span class="p">:</span> <span class="n">technopedia</span><span class="o">.</span><span class="n">com</span>
+          <span class="n">identifier</span><span class="p">:</span> <span class="n">Apache</span> <span class="n">Foundation</span> <span class="p">(</span><span class="n">The</span><span class="p">)</span>
+        <span class="o">-</span> <span class="n">source</span><span class="p">:</span> <span class="n">googlecode</span><span class="o">.</span><span class="n">com</span>
+          <span class="n">identifier</span><span class="p">:</span> <span class="n">apache</span><span class="o">-</span><span class="n">foundation</span>
+</pre></div>
+</div>
+<p>Other identifiers may also be used, as needed by some tools, such as
+in hyperlinked APIs.</p>
+</div>
+<div class="section" id="organizing-data-and-relationships">
+<h2>Organizing data and relationships<a class="headerlink" href="#organizing-data-and-relationships" title="Permalink to this headline">¶</a></h2>
+<p>Describing relationships between objects is essential in AboutCode Data.
+There are two ways to describe these relationships: by referencing or by
+embedding objects.</p>
+<p>When using a reference, you relate objects by providing identifiers to
+these objects and may provide additional object details in separate
+lists. When embedding, you include not only the reference but also the
+related object details in another object data. This could include all
+data about an object or a subset as needed.</p>
+<p>For example, this components list embeds a list of two packages.</p>
+<p>Note: “components” is always a list, <em>even when it has a single component</em>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;components&quot;</span><span class="p">:</span> <span class="p">[{</span>
+    <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;http://apache.org&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Apache httpd&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;2.3&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;packages&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;httpd&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;2.3.4&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;download_url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://apache.org/dist/httpd/httpd-2.3.4.zip&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;sha1&quot;</span><span class="p">:</span> <span class="s2">&quot;acbf23256361abcdf&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">3267</span><span class="p">,</span>
+         <span class="s2">&quot;filename&quot;</span><span class="p">:</span> <span class="s2">&quot;httpd-2.3.4.zip&quot;</span>
+        <span class="p">},</span>
+
+        <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;httpd&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;2.3.5&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;download_url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://apache.org/dist/httpd/httpd-2.3.5.tar.gz&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;sha1&quot;</span><span class="p">:</span> <span class="s2">&quot;ac8823256361adfcdf&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">33267</span><span class="p">,</span>
+         <span class="s2">&quot;filename&quot;</span><span class="p">:</span> <span class="s2">&quot;httpd-2.3.5.tar.gz&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}]}</span>
+</pre></div>
+</div>
+<p>In this example, the component list references two packages that are
+listed separately and uses the checksum as package identifiers for the
+reference. This data is strictly equivalent to the previous example but
+using a different layout. When all the data is provided, the effect of
+embedding or referencing objects results in the same data, just
+organized differently:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;components&quot;</span><span class="p">:</span> <span class="p">[{</span>
+    <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;http://apache.org&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Apache httpd&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;2.3&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;packages&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span><span class="s2">&quot;sha1&quot;</span><span class="p">:</span> <span class="s2">&quot;aacbf23256361abcdf&quot;</span><span class="p">},</span>
+        <span class="p">{</span><span class="s2">&quot;sha1&quot;</span><span class="p">:</span> <span class="s2">&quot;ac8823256361adfcdf&quot;</span><span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}],</span>
+
+<span class="s2">&quot;packages&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;httpd&quot;</span><span class="p">,</span> <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;2.3.4&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;download_url&quot;</span><span class="p">:</span>
+     <span class="s2">&quot;http://apache.org/dist/httpd/httpd-2.3.4.zip&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;sha1&quot;</span><span class="p">:</span> <span class="s2">&quot;acbf23256361abcdf&quot;</span><span class="p">,</span> <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">23267</span><span class="p">,</span> <span class="s2">&quot;filename&quot;</span><span class="p">:</span> <span class="s2">&quot;httpd-2.3.4.zip&quot;</span><span class="p">},</span>
+
+    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;httpd&quot;</span><span class="p">,</span> <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;2.3.5&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;download_url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://apache.org/dist/httpd/httpd-2.3.5.tar.gz&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;sha1&quot;</span><span class="p">:</span> <span class="s2">&quot;ac8823256361adfcdf&quot;</span><span class="p">,</span> <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">33267</span><span class="p">,</span> <span class="s2">&quot;filename&quot;</span><span class="p">:</span> <span class="s2">&quot;httpd-2.3.5.tar.gz&quot;</span><span class="p">}</span>
+<span class="p">]}</span>
+</pre></div>
+</div>
+<p>In this third example the packages are referencing one component
+instead. That component is always wrapped in a components list. The
+component detail data is not provided. The details may be available
+elsewhere in a tool that tracks components:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;packages&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;httpd&quot;</span><span class="p">,</span> <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;2.3.4&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;download_url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://apache.org/dist/httpd/httpd-2.3.4.zip&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;sha1&quot;</span><span class="p">:</span> <span class="s2">&quot;acbf23256361abcdf&quot;</span><span class="p">,</span> <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">23267</span><span class="p">,</span> <span class="s2">&quot;filename&quot;</span><span class="p">:</span> <span class="s2">&quot;httpd-2.3.4.zip&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;components&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span><span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;http://apache.org&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Apache httpd&quot;</span><span class="p">,</span> <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;2.3&quot;</span><span class="p">}</span>
+     <span class="p">]</span>
+    <span class="p">},</span>
+
+    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;httpd&quot;</span><span class="p">,</span> <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;2.3.5&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;download_url&quot;</span><span class="p">:</span><span class="s2">&quot;http://apache.org/dist/httpd/httpd-2.3.5.tar.gz&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;sha1&quot;</span><span class="p">:</span> <span class="s2">&quot;ac8823256361adfcdf&quot;</span><span class="p">,</span> <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">33267</span><span class="p">,</span> <span class="s2">&quot;filename&quot;</span><span class="p">:</span> <span class="s2">&quot;httpd-2.3.5.tar.gz&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;components&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span><span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;http://apache.org&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Apache httpd&quot;</span><span class="p">,</span> <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;2.3&quot;</span><span class="p">}</span>
+     <span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>Relationships can be documented with this approach in different ways.
+Typically when the primary concern is about a Product, then the Product
+object may embed data about its Components. When the primary concern is
+Packages, they may embed or reference Products or Components or files.
+For example:</p>
+<ul class="simple">
+<li><p>A tool may prefer to provide data with products or components as top level
+objects. The components used in a Product are naturally embedded in the products.</p></li>
+<li><p>A tool concerned more with files, will provide files as top
+level objects and may embed package details when they are found for
+a file or directory path.</p></li>
+<li><p>Another tool may focus on packages and provide packages first with
+component references and possibly embedded files. A matching tool
+may provide packages first and reference matched files. The file
+paths of a package are naturally embedded in the package, though
+using references may help keep the data simpler when there is a large
+volume of files.</p></li>
+<li><p>A tool that generates attribution documentation may focus
+first on components and second on licenses or packages references.</p></li>
+<li><p>A tool dealing with security vulnerabilities may define a
+Vulnerability object and reference Packages and Files that are
+affected by a Vulnerability.</p></li>
+</ul>
+<p>To better understand the embedding or referencing relationships:</p>
+<ul class="simple">
+<li><p>using references is similar to a tabular data layout, akin to a
+relational database table structure</p></li>
+<li><p>using embedding is similar to a tree data layout such as in a
+file/directory tree or nested data such as XML.</p></li>
+</ul>
+<p>Another way to think about these relationships is a “GROUP BY” statement
+in SQL. The data can be grouped-by Component, then Packages or
+grouped-by Files then Components.</p>
+<p>Both referencing and embedding layouts can be combined freely and are
+not mutually exclusive. When using both at the same time, some care is
+needed to avoid creating documents with conflicting or duplicated data
+that is referenced and embedded at the same time.</p>
+<p>Using references is often useful when there is an agreement on how to
+reference objects between two tools or parties. For instance, when using
+nexB tools, a unique and well defined license key is used to reference a
+license rather than embedding the full license details. A concise
+reference to the name and version of a public package from a well known
+package repository such as RPM or Maven can be used to the same effect.
+Or an SPDX license identifier can be used to reference an SPDX-listed
+license without having to embed its full license text.</p>
+<p>The nature of the relationship between two objects can be specified when
+it is not obvious and requires some extra specification.  Each tool can
+define additional attributes to document these. For instance a common
+relationship between a party and a product or component is a role such
+as owner. For packages a role can be maintainer, author, etc.  Or the
+license of a file or package may be the “asserted” license by the
+project authors. It may differ from the “detected” license from a scan
+or code inspection and may further differ from a “concluded” license or
+a “selected” license when there is a license choice. At the package and
+license level the types of relationships documented in the SPDX
+specification are a good source for more details. For example this
+component references two parties where one is the author and the other
+is the maintainer documented using a role attribute:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;components&quot;</span><span class="p">:</span> <span class="p">[{</span>
+    <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;http://apache.org&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Apache httpd&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;2.3&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;parties&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;John Doe&quot;</span><span class="p">,</span> <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;person&quot;</span><span class="p">,</span> <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;author&quot;</span><span class="p">},</span>
+        <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Jane Smith&quot;</span><span class="p">,</span> <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;person&quot;</span><span class="p">,</span> <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;maintainer&quot;</span><span class="p">},</span>
+        <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Jane Smith&quot;</span><span class="p">,</span> <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;person&quot;</span><span class="p">,</span> <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;owner&quot;</span><span class="p">},</span>
+    <span class="p">]</span>
+<span class="p">}]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="document-format-conventions">
+<h2>Document format conventions<a class="headerlink" href="#document-format-conventions" title="Permalink to this headline">¶</a></h2>
+<p>The default ABC Data format is JSON (though it can be serialized to
+anything else that would preserve its structure). YAML is also supported
+and preferred for storage of simple documents that document one or a few
+top level objects and that need to be edited by a human.</p>
+<p>The data structure by nested name/value pairs attributes and lists of
+values maps naturally to the corresponding JSON and YAML constructs. In
+JSON-speak these are arrays (lists) and objects (name/value pairs).</p>
+<p>ABC Data can be provided as simple files or embedded in some API
+payload. As files, their content can be either JSON or YAML and should
+have either a .json or .yml extension by convention. For backwards
+compatibility with previous AboutCode conventions, the .ABOUT extension
+can be used for YAML documents. For instance this is used in the legacy
+about_code_tool and its successors. The DocumentCode tool can store
+individual attribution data in a .ABOUT yml file.</p>
+<p>The top level structure of an ABC Data block is always a JSON object or
+YAML dictionary. Depending on the context this top level structure may
+be wrapped in another data structure (for instance when exchanging
+AboutCode Data in some web api, the API may provide ABC Data as a
+payload in a “results” or “body” or “data” block and also have some
+“headers” or “meta” block).</p>
+<p>The top level elements must contain at least one of the object names and
+a list of objects such as here with a list of files:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">files</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">path</span><span class="p">:</span> <span class="n">this</span><span class="o">/</span><span class="n">foo</span><span class="o">/</span><span class="n">bar</span>
+      <span class="n">size</span><span class="p">:</span> <span class="mi">123</span>
+      <span class="n">sha1</span><span class="p">:</span> <span class="n">aaf35463472abcd</span>
+    <span class="o">-</span> <span class="n">path</span><span class="p">:</span> <span class="n">that</span><span class="o">/</span><span class="n">baz</span>
+</pre></div>
+</div>
+<p>Optionally an “aboutcode_version” attribute can be added at the top
+level to document which version of the AboutCode Data structure is used
+for a document. For example: aboutcode_version: 4.0</p>
+<p>Order of attributes matters to help reading documents: tools that write
+ABC Data should attempt to  use a consistent order for objects and
+attribute names rather than a random ordering. However, some tools may
+not be able to set a specific order so thi is only a recommendation. The
+preferred order is to start with identifiers and keys and from the most
+important to the least important attributes, followed by attributes
+grouped logically together,  followed by related objects.</p>
+</div>
+<div class="section" id="references-between-documents-and-payload-embedding-other-files">
+<h2>References between documents and payload, embedding other files<a class="headerlink" href="#references-between-documents-and-payload-embedding-other-files" title="Permalink to this headline">¶</a></h2>
+<p>ABC Data may reference other data. For instance in a hyperlinked REST
+API a list of URLs to further invoke the API and get license’ details
+may be provided with an api_url attribute to identify which API calls
+to invoke. The ways to reference data and the semantics and mechanics of
+each of these embeddings or references needed to get the actual data are
+not specified here. Each tool may offer its own mechanism. A convention
+for an hyperlinked REST API JSON payload could be to use
+api_url(s) identifier to specify additional “GET”able endpoints. The
+AttributeCode tool use *_file attributes in YAML or JSON documents
+to reference external license and notices text files to load with the
+text content.</p>
+<p>Another convention is used in ScanCode to reference license texts and
+license detection rules by key:
+An ABC Data YAML file contains the ABC Data. And side by side there is a
+file with the same base name and a LICENSE, SPDX or NOTICE, RULE,
+extension that contains the actual text corresponding to the license,
+the SPDX text or the rule text. The convention here is to use an
+implicit reference between files because they have the same base name
+and different extensions.</p>
+<p>In the future, we may specify how to embed an external ABC Data file in
+another ABC Data file; this would only apply to file-based ABC Data
+payload though and could not apply to hyperlinked REST APIs.</p>
+</div>
+<div class="section" id="document-as-files-naming-exchange-and-storage">
+<h2>Document-as-files naming, exchange and storage<a class="headerlink" href="#document-as-files-naming-exchange-and-storage" title="Permalink to this headline">¶</a></h2>
+<p>Each tool handling ABC Data may name an ABC Data file in any manner and
+store the data in any way that is appropriate. The structure is a set of
+data exchange conventions and may be used for storage but nothing is
+specified on how to do this.</p>
+<p>For consistency, tools consuming AboutCode Data are encouraged to use
+the same data structure internally and in their user interface to
+organize and name the data, but this is only a recommendation.</p>
+<p>For instance, the AttributeCode tool uses a convention to store ABC Data
+as YAML in a file with a .ABOUT extension and uses the ABC Data structures
+internally and externally.</p>
+<p>When exchanging data (for instance over an API), the API provider of ABC
+Data should support a request to return either embedded data or data by
+reference and ideally allow the caller to specify which objects and
+attributes it is interested in (possibly in the future using something
+like GraphQL).</p>
+<p>When interacting with tools through an  API, the conversation could
+start by sending an ABC Data payload with some extra request data and
+receiving an ABC Data payload in return. For instance, when requesting
+matching packages from a matching tool, you could start by passing scan
+data with checksums for several files at once and receive detailed data
+for each of the matched files or packages.</p>
+</div>
+<div class="section" id="documenting-and-validating-attributes">
+<h2>Documenting and validating attributes<a class="headerlink" href="#documenting-and-validating-attributes" title="Permalink to this headline">¶</a></h2>
+<p>Each tool handling ABC Data may only be interested in processing certain
+objects and attributes when accepting data in, or when providing data
+out. Attributes that are unknown should be ignored. To document which
+objects and which attributes a tool can handle, a tool should provide
+some documentation. The documentation format is not specified here, but
+it could use a JSON schema in the future. This should include
+documentation regarding if and how data is validated, and when and how
+errors or warnings are triggered and provided when there is a validation
+error. For example, a validation could be to check that an SPDX license
+id exists at SPDX or that a URL is valid.</p>
+</div>
+<div class="section" id="notes-on-yaml-format">
+<h2>Notes on YAML format<a class="headerlink" href="#notes-on-yaml-format" title="Permalink to this headline">¶</a></h2>
+<p>YAML is the preferred file format for ABC Data destined for reading or
+writing primarily by humans.</p>
+<ul class="simple">
+<li><p>Block-style is better.</p></li>
+<li><p>When you write AboutCode Data as YAML, you should privilege block-style
+and avoid flow-style YAML which is less readable for humans.</p></li>
+<li><p>Avoid Multi-document YAML.</p></li>
+<li><p>Multi-document YAML documents should be avoided (when using the —
+separators).</p></li>
+<li><p>Beware of parser shenanigans:  Most YAML parsers recognize and convert
+automatically certain data types such as numbers, booleans or dates.
+You should be aware of this because the ABC Data strings may contain
+date stamps. You may want to configure a YAML parser to deactivate some
+of these automated format conversions to avoid unwanted conversions.</p></li>
+</ul>
+</div>
+<div class="section" id="notes-on-json-format">
+<h2>Notes on JSON Format<a class="headerlink" href="#notes-on-json-format" title="Permalink to this headline">¶</a></h2>
+<p>JSON is the preferred file format for ABC Data destined for reading and
+writing primarily by machines.</p>
+<ul class="simple">
+<li><p>“Streamable”  JSON with JSON-lines.</p></li>
+</ul>
+<p>A large JSON document may benefit from being readable line-by-line
+rather than loaded all at once in memory. For this purpose, the
+convention is to use JSON lines where each line in the document is a
+valid JSON document itself: this enables reading the document in
+line-by-line increments. The preferred way to do so is to provide one
+ABCD top level object per document where the first line contains meta
+information about the stream such as a notice, a tool version or  the
+aboutcode version.</p>
+<ul class="simple">
+<li><p>Avoid escaped slash.</p></li>
+</ul>
+<p>The JSON specification says you CAN escape forward slash, but this is
+optional. It is best to avoid escaping slash when not needed for better
+readability.</p>
+<p>For instance for URLs this form:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;https://enterprise.dejacode.com/component_catalog/nexB/16fusb/1.0/&quot;</span>
+</pre></div>
+</div>
+<p>should be preferred over this escaped form when backslashes are not
+needed:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;https:</span><span class="se">\\</span><span class="s2">/</span><span class="se">\\</span><span class="s2">/enterprise.dejacode.com</span><span class="se">\\</span><span class="s2">/component_catalog</span><span class="se">\\</span><span class="s2">/nexB</span><span class="se">\\</span><span class="s2">/16fusb</span><span class="se">\\</span><span class="s2">/1.0</span><span class="se">\\</span><span class="s2">/&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="notes-on-embedding-abc-data-in-source-code-files">
+<h2>Notes on embedding ABC Data in source code files.<a class="headerlink" href="#notes-on-embedding-abc-data-in-source-code-files" title="Permalink to this headline">¶</a></h2>
+<p>It could be useful to include ABC Data directly in a source code file,
+such as to provide structured license and provenance data for a single
+file. This requires of course a file modification. While this is not a
+preferred use case, it can be handy to document your own code one file
+at a time. Using an external ABC Data file should be preferred but here
+are conventions for this use case:</p>
+<ul class="simple">
+<li><p>The ABC Data should be embedded in a top level block of comments.</p></li>
+<li><p>Inside that block of comments the preferred format is YAML.</p></li>
+<li><p>How a tool collects that ABC Data when embedded in code is to be
+determined.</p></li>
+<li><p>Tools offering such support should document and eventually enforce
+their own conventions.</p></li>
+</ul>
+</div>
+<div class="section" id="notes-on-spreadsheet-and-csv-files">
+<h2>Notes on spreadsheet and CSV files<a class="headerlink" href="#notes-on-spreadsheet-and-csv-files" title="Permalink to this headline">¶</a></h2>
+<p>ABC Data does not support or endorse using CSV or spreadsheets for data
+exchange.</p>
+<p>CSV and other spreadsheet file formats are NOT recommended to store ABC
+Data. In most cases you cannot store a correct data set in a spreadsheet.
+However, these tools are also widely used and convenient.
+Here are some recommendations when you need  to communicate ABC data in
+a CSV or spreadsheet format: even though ABC Data is naturally nested
+and tree-like, it should be possible to serialize certain ABCD objects
+as flat, tabular data.</p>
+<ul class="simple">
+<li><p>Naming columns</p></li>
+</ul>
+<p>The table column names may need to be adjusted to correctly reference
+the multiple level of object and attribute nesting using a dot as a
+separator. The dot or period is otherwise not allowed in attribute
+names. For example, you could use files.path for files or
+components.name to reference a component name. Some tools may prefer to
+create tabular files with their own column names and layout, and provide
+mappings to ABC Data attribute and object names.</p>
+<ul class="simple">
+<li><p>Example for an inventory:</p></li>
+</ul>
+<p>Since ABC Data can be related by reference, the preferred (and
+cumbersome) way to store ABC Data in a spreadsheet is to use one tab for
+each object type and use identifying attributes to relate objects
+between each others across tabs. For instance, in a Bill of Materials
+(BOM) spreadsheet for a Product, you could use a tab to describe the
+Product attributes and another tab to describe the Components used in
+this Product and possibly additional tabs to describe the related
+packages and files corresponding to these</p>
+<ul class="simple">
+<li><p>Care is needed for Packages, Components and other names and for dates,
+versions, unicode and UTF-8 to avoid damaging content (aka. mojibake)</p></li>
+</ul>
+<p>Spreadsheet tools such as Excel or LibreOffice  automatically recognize
+and convert data to their own format: a date of 20016-08-17 may be
+converted to a date number when a CSV is loaded and difficult to recover
+as a correct original date stamp string afterwards. Or a version 1.0 may
+be irreversibly converted to 1 or 1.90 to 1.9 losing important version
+information.</p>
+<p>Spreadsheet tools may not recognize and handle properly UTF-8 texts and
+damage descriptions and texts. These tools may also treat strings
+starting with the equal sign as a formula. When incorrectly recognizing
+special accentuated characters this may damage texts creating what is
+called “mojibake” (See <a class="reference external" href="https://en.wikipedia.org/wiki/Mojibake">https://en.wikipedia.org/wiki/Mojibake</a>)</p>
+<p>Always use these tools with caution and be prepared for damage to your
+data if you use these tools to save or create ABC Data.</p>
+<div class="section" id="impact-on-attributecode">
+<h3>Impact on AttributeCode<a class="headerlink" href="#impact-on-attributecode" title="Permalink to this headline">¶</a></h3>
+<p>As an integration tool, AttributeCode itself may specify only a very few elements.</p>
+<p>The new structure will need to be implemented. Here could be an example
+in YAML:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">aboutcode_version</span><span class="p">:</span> <span class="mf">4.0</span>
+<span class="n">components</span><span class="p">:</span>
+ <span class="o">-</span>  <span class="n">source</span><span class="p">:</span> <span class="n">dejacode</span><span class="o">.</span><span class="n">com</span>
+    <span class="n">name</span><span class="p">:</span> <span class="n">bitarray</span>
+    <span class="n">version</span><span class="p">:</span> <span class="mf">0.8</span><span class="o">.</span><span class="mi">1</span>
+    <span class="n">homepage_url</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ilanschnell</span><span class="o">/</span><span class="n">bitarray</span>
+    <span class="n">copyright</span><span class="p">:</span> <span class="n">Copyright</span> <span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="n">Ilan</span> <span class="n">Schnell</span> <span class="ow">and</span> <span class="n">others</span>
+    <span class="n">files</span><span class="p">:</span>
+        <span class="o">-</span> <span class="n">path</span><span class="p">:</span> <span class="n">some</span><span class="o">/</span><span class="n">directory</span><span class="o">/</span>
+           <span class="nb">type</span><span class="p">:</span> <span class="nb">dir</span>
+        <span class="o">-</span> <span class="n">path</span><span class="p">:</span> <span class="n">bitarray</span><span class="o">-</span><span class="mf">0.8</span><span class="o">.</span><span class="mi">1</span><span class="o">-</span><span class="n">cp27</span><span class="o">-</span><span class="n">cp27m</span><span class="o">-</span><span class="n">macosx_10_9_intel</span><span class="o">.</span><span class="n">whl</span>
+        <span class="o">-</span> <span class="n">path</span><span class="p">:</span> <span class="n">someotherdir</span><span class="o">/</span><span class="n">bitarray</span><span class="o">-</span><span class="mf">0.8</span><span class="o">.</span><span class="mi">1</span><span class="o">-</span><span class="n">cp27</span><span class="o">-</span><span class="n">cp27m</span><span class="o">-</span><span class="n">manylinux1_i686</span><span class="o">.</span><span class="n">whl</span>
+        <span class="o">-</span> <span class="n">path</span><span class="p">:</span> <span class="n">bitarray</span><span class="o">-</span><span class="mf">0.8</span><span class="o">.</span><span class="mi">1</span><span class="o">-</span><span class="n">cp27</span><span class="o">-</span><span class="n">cp27m</span><span class="o">-</span><span class="n">manylinux1_x86_64</span><span class="o">.</span><span class="n">whl</span>
+        <span class="o">-</span> <span class="n">path</span><span class="p">:</span> <span class="n">bitarray</span><span class="o">-</span><span class="mf">0.8</span><span class="o">.</span><span class="mi">1</span><span class="o">-</span><span class="n">cp27</span><span class="o">-</span><span class="n">cp27m</span><span class="o">-</span><span class="n">win_amd64</span><span class="o">.</span><span class="n">whl</span>
+        <span class="o">-</span> <span class="n">path</span><span class="p">:</span> <span class="n">bitarray</span><span class="o">-</span><span class="mf">0.8</span><span class="o">.</span><span class="mi">1</span><span class="o">-</span><span class="n">cp27</span><span class="o">-</span><span class="n">cp27m</span><span class="o">-</span><span class="n">win32</span><span class="o">.</span><span class="n">whl</span>
+        <span class="o">-</span> <span class="n">path</span><span class="p">:</span> <span class="n">bitarray</span><span class="o">-</span><span class="mf">0.8</span><span class="o">.</span><span class="mi">1</span><span class="o">-</span><span class="n">cp27</span><span class="o">-</span><span class="n">cp27mu</span><span class="o">-</span><span class="n">manylinux1_i686</span><span class="o">.</span><span class="n">whl</span>
+        <span class="o">-</span> <span class="n">path</span><span class="p">:</span> <span class="n">bitarray</span><span class="o">-</span><span class="mf">0.8</span><span class="o">.</span><span class="mi">1</span><span class="o">-</span><span class="n">cp27</span><span class="o">-</span><span class="n">cp27mu</span><span class="o">-</span><span class="n">manylinux1_x86_64</span><span class="o">.</span><span class="n">whl</span>
+        <span class="o">-</span> <span class="n">path</span><span class="p">:</span> <span class="n">bitarray</span><span class="o">-</span><span class="mf">0.8</span><span class="o">.</span><span class="mi">1</span><span class="o">-</span><span class="n">cp27</span><span class="o">-</span><span class="n">none</span><span class="o">-</span><span class="n">macosx_10_6_intel</span><span class="o">.</span><span class="n">whl</span>
+        <span class="o">-</span> <span class="n">path</span><span class="p">:</span> <span class="n">bitarray</span><span class="o">-</span><span class="mf">0.8</span><span class="o">.</span><span class="mf">1.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+
+    <span class="n">parties</span><span class="p">:</span>
+      <span class="o">-</span> <span class="n">role</span><span class="p">:</span> <span class="n">owner</span>
+        <span class="n">name</span><span class="p">:</span> <span class="n">Ilan</span> <span class="n">Schnell</span>
+
+    <span class="n">packages</span><span class="p">:</span>
+      <span class="o">-</span> <span class="n">download_url</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">pypi</span><span class="o">.</span><span class="n">python</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">source</span><span class="o">/</span><span class="n">b</span><span class="o">/</span><span class="n">bitarray</span><span class="o">/</span><span class="n">bitarray</span><span class="o">-</span><span class="mf">0.8</span><span class="o">.</span><span class="mf">1.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+        <span class="n">sha1</span><span class="p">:</span> <span class="mi">468456384529</span><span class="n">abcdef342</span>
+
+    <span class="n">license_expression</span><span class="p">:</span> <span class="n">psf</span>
+
+    <span class="n">licenses</span><span class="p">:</span>
+      <span class="o">-</span> <span class="n">source</span><span class="p">:</span> <span class="n">scancode</span><span class="o">.</span><span class="n">com</span>
+        <span class="n">key</span><span class="p">:</span> <span class="n">psf</span>
+        <span class="n">text_file</span><span class="p">:</span> <span class="n">PSF</span><span class="o">.</span><span class="n">LICENSE</span>
+</pre></div>
+</div>
+<p>And here would be similar data in JSON:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;components&quot;</span><span class="p">:</span> <span class="p">[{</span>
+               <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;bitarray&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;0.8.1&quot;</span>
+               <span class="s2">&quot;homepage_url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/ilanschnell/bitarray&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;copyright&quot;</span><span class="p">:</span> <span class="s2">&quot;Copyright (c) Ilan Schnell and others&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;license_expression&quot;</span><span class="p">:</span> <span class="s2">&quot;psf&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;licenses&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;psf&quot;</span><span class="p">,</span> <span class="s2">&quot;text_file&quot;</span><span class="p">:</span> <span class="s2">&quot;PSF.LICENSE&quot;</span><span class="p">,</span> <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;scancode.com&quot;</span><span class="p">}],</span>
+               <span class="s2">&quot;packages&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;download_url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://pypi.python.org/packages/source/b/bitarray/bitarray-0.8.1.tar.gz&quot;</span>
+                            <span class="s2">&quot;sha1&quot;</span><span class="p">:</span> <span class="s2">&quot;468456384529abcdef342&quot;</span>
+                <span class="p">}],</span>
+               <span class="s2">&quot;parties&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Ilan Schnell&quot;</span><span class="p">,</span> <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;owner&quot;</span><span class="p">}],</span>
+
+               <span class="s2">&quot;files&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;some/directory/&quot;</span><span class="p">,</span> <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;dir&quot;</span><span class="p">},</span>
+                         <span class="p">{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;bitarray-0.8.1-cp27-cp27m-macosx_10_9_intel.whl&quot;</span><span class="p">},</span>
+                         <span class="p">{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;bitarray-0.8.1-cp27-cp27m-manylinux1_i686.whl&quot;</span><span class="p">},</span>
+                         <span class="p">{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;bitarray-0.8.1-cp27-cp27m-manylinux1_x86_64.whl&quot;</span><span class="p">},</span>
+                         <span class="p">{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;bitarray-0.8.1-cp27-cp27m-win_amd64.whl&quot;</span><span class="p">},</span>
+                         <span class="p">{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;bitarray-0.8.1-cp27-cp27m-win32.whl&quot;</span><span class="p">},</span>
+                         <span class="p">{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;bitarray-0.8.1-cp27-cp27mu-manylinux1_i686.whl&quot;</span><span class="p">},</span>
+                         <span class="p">{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;bitarray-0.8.1-cp27-cp27mu-manylinux1_x86_64.whl&quot;</span><span class="p">},</span>
+                         <span class="p">{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;bitarray-0.8.1-cp27-none-macosx_10_6_intel.whl&quot;</span><span class="p">},</span>
+                         <span class="p">{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;bitarray-0.8.1.tar.gz&quot;</span><span class="p">}],</span>
+               <span class="p">}],</span>
+
+ <span class="n">aboutcode_version</span><span class="p">:</span> <span class="s2">&quot;4.0&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="impact-on-scancode-toolkit">
+<h3>Impact on ScanCode Toolkit<a class="headerlink" href="#impact-on-scancode-toolkit" title="Permalink to this headline">¶</a></h3>
+<p>The new format will need to be implemented for scan results in general
+and for packages in particular.</p>
+<p>ScanCode will specify Package and several attributes related to scanning
+and referencing clues for files, directories and packages.</p>
+<p>Alternatively Packages could be extracted to an independent PackagedCode library.</p>
+<p>The changes will minimize impact on the layout of the scan results. Here is an
+example of a scan payload in ABCD format: this is essentially the standard scan
+format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;scancode_notice&quot;</span><span class="p">:</span> <span class="s2">&quot;Generated with ScanCode and provided .......&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;scancode_version&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0.0.dev0&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;files_count&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+  <span class="s2">&quot;files&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;samples/JGroups/src/&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;directory&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;files_count&quot;</span><span class="p">:</span> <span class="mi">29</span>
+      <span class="s2">&quot;licenses&quot;</span> <span class="p">:</span> <span class="p">[</span>
+          <span class="p">{</span> <span class="s2">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;apache-2.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;concluded&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">}</span>
+      <span class="p">]</span>
+    <span class="p">}</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;samples/JGroups/src/GuardedBy.java&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;2015-12-10&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;programming_language&quot;</span><span class="p">:</span> <span class="s2">&quot;Java&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;sha1&quot;</span><span class="p">:</span> <span class="s2">&quot;981d67087e65e9a44957c026d4b10817cf77d966&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;GuardedBy.java&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;extension&quot;</span><span class="p">:</span> <span class="s2">&quot;.java&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;file_type&quot;</span><span class="p">:</span> <span class="s2">&quot;ASCII text&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;is_text&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+      <span class="s2">&quot;is_source&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+      <span class="s2">&quot;md5&quot;</span><span class="p">:</span> <span class="s2">&quot;c5064400f759d3e81771005051d17dc1&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;file&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;is_archive&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+      <span class="s2">&quot;mime_type&quot;</span><span class="p">:</span> <span class="s2">&quot;text/plain&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">813</span><span class="p">,</span>
+      <span class="s2">&quot;copyrights&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="s2">&quot;end_line&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+          <span class="s2">&quot;start_line&quot;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
+          <span class="s2">&quot;holder&quot;</span><span class="p">:</span> <span class="s2">&quot;Brian Goetz and Tim Peierls&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;statement&quot;</span><span class="p">:</span> <span class="s2">&quot;Copyright (c) 2005 Brian Goetz and Tim Peierls&quot;</span>
+        <span class="p">}</span>
+      <span class="p">],</span>
+      <span class="s2">&quot;licenses&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span> <span class="s2">&quot;detected&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+          <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;cc-by-2.5&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;short_name&quot;</span><span class="p">:</span> <span class="s2">&quot;CC-BY-2.5&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;homepage_url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://creativecommons.org/licenses/by/2.5/&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;dejacode_url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://enterprise.dejacode.com/license_library/Demo/cc-by-2.5/&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;text_url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://creativecommons.org/licenses/by/2.5/legalcode&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;owner&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Creative Commons&quot;</span><span class="p">,</span>
+          <span class="p">},</span>
+          <span class="s2">&quot;detection_score&quot;</span><span class="p">:</span> <span class="mf">100.0</span><span class="p">,</span>
+          <span class="s2">&quot;start_line&quot;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span>
+          <span class="s2">&quot;end_line&quot;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span>
+          <span class="s2">&quot;category&quot;</span><span class="p">:</span> <span class="s2">&quot;Attribution&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;external_reference&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;spdx.org&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;CC-BY-2.5&quot;</span>
+            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://spdx.org/licenses/CC-BY-2.5&quot;</span><span class="p">,</span>
+          <span class="p">},</span>
+        <span class="p">}</span>
+      <span class="p">],</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;samples/JGroups/src/ImmutableReference.java&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;2015-12-10&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;md5&quot;</span><span class="p">:</span> <span class="s2">&quot;48ca3c72fb9a65c771a321222f118b88&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;file&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;mime_type&quot;</span><span class="p">:</span> <span class="s2">&quot;text/plain&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="s2">&quot;1838&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;programming_language&quot;</span><span class="p">:</span> <span class="s2">&quot;Java&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;sha1&quot;</span><span class="p">:</span> <span class="s2">&quot;30f56b876d5576d9869e2c5c509b08db57110592&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;ImmutableReference.java&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;extension&quot;</span><span class="p">:</span> <span class="s2">&quot;.java&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;file_type&quot;</span><span class="p">:</span> <span class="s2">&quot;ASCII text&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;is_text&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+      <span class="s2">&quot;license_expression&quot;</span><span class="p">:</span> <span class="s2">&quot;lgpl-2.1-plus and lgpl-2.0-plus&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;is_source&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+      <span class="s2">&quot;copyrights&quot;</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="s2">&quot;end_line&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="s2">&quot;start_line&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;holder&quot;</span><span class="p">:</span> <span class="s2">&quot;Red Hat, Inc.&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;statement&quot;</span><span class="p">:</span> <span class="s2">&quot;Copyright 2010, Red Hat, Inc.&quot;</span>
+      <span class="p">}],</span>
+      <span class="s2">&quot;licenses&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span> <span class="s2">&quot;detected&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+          <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;lgpl-2.1-plus&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;category&quot;</span><span class="p">:</span> <span class="s2">&quot;Copyleft Limited&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;homepage_url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;start_line&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+          <span class="s2">&quot;end_line&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+          <span class="s2">&quot;short_name&quot;</span><span class="p">:</span> <span class="s2">&quot;LGPL 2.1 or later&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;owner&quot;</span><span class="p">:</span> <span class="s2">&quot;Free Software Foundation (FSF)&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;dejacode_url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://enterprise.dejacode.com/license_library/Demo/lgpl-2.1-plus/&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;detection_score&quot;</span><span class="p">:</span> <span class="mf">100.0</span><span class="p">,</span>
+          <span class="s2">&quot;external_reference&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://spdx.org/licenses/LGPL-2.1+&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;spdx.org&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;LGPL-2.1+&quot;</span>
+          <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="p">{</span> <span class="s2">&quot;concluded&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+          <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;lgpl-2.0-plus&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;short_name&quot;</span><span class="p">:</span> <span class="s2">&quot;LGPL 2.0 or later&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;homepage_url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.gnu.org/licenses/old-licenses/lgpl-2.0.html&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;end_line&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+          <span class="s2">&quot;dejacode_url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://enterprise.dejacode.com/license_library/Demo/lgpl-2.0-plus/&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;text_url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.gnu.org/licenses/old-licenses/lgpl-2.0-standalone.html&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;owner&quot;</span><span class="p">:</span> <span class="s2">&quot;Free Software Foundation (FSF)&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;start_line&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+          <span class="s2">&quot;detection_score&quot;</span><span class="p">:</span> <span class="mf">47.46</span><span class="p">,</span>
+          <span class="s2">&quot;category&quot;</span><span class="p">:</span> <span class="s2">&quot;Copyleft Limited&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;external_reference&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://spdx.org/licenses/LGPL-2.0+&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;spdx.org&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;LGPL-2.0+&quot;</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+      <span class="p">],</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;samples/arch/zlib.tar.gz&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;file_type&quot;</span><span class="p">:</span> <span class="s2">&quot;gzip compressed data, last modified: Wed Jul 15 11:08:19 2015, from Unix&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;2015-12-10&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;is_binary&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+      <span class="s2">&quot;md5&quot;</span><span class="p">:</span> <span class="s2">&quot;20b2370751abfc08bb3556c1d8114b5a&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;sha1&quot;</span><span class="p">:</span> <span class="s2">&quot;576f0ccfe534d7f5ff5d6400078d3c6586de3abd&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;zlib.tar.gz&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;extension&quot;</span><span class="p">:</span> <span class="s2">&quot;.gz&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">28103</span><span class="p">,</span>
+      <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;file&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;is_archive&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+      <span class="s2">&quot;mime_type&quot;</span><span class="p">:</span> <span class="s2">&quot;application/x-gzip&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;packages&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;plain tarball&quot;</span>
+        <span class="p">}</span>
+      <span class="p">],</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="aboutcode-manager">
+<h3>AboutCode Manager<a class="headerlink" href="#aboutcode-manager" title="Permalink to this headline">¶</a></h3>
+<p>As a primary GUI for data review and integration, AboutCode Manager
+will need to be fluent in ABC Data to read/write ABC Data locally and
+remotely through API from several sources.</p>
+<p>The short term changes would include:</p>
+<ul class="simple">
+<li><p>Support reading ABC Data from ScanCode</p></li>
+<li><p>Writing ABC Data, adding conclusions as related objects in the proper
+lists</p></li>
+</ul>
+</div>
+<div class="section" id="new-and-future-tools">
+<h3>New and Future tools<a class="headerlink" href="#new-and-future-tools" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>TraceCode: would likely specify low level attributes for files (such
+as debug symbols, etc) and how files are related from devel to deploy
+and back.</p></li>
+<li><p>VulnerableCode: would likely specify a new Vulnerability object and
+the related attributes and may track several identifiers to the NIST
+NVD CPE and CVE.</p></li>
+<li><p>DeltaCode: would likely specify attributes to describe the changes
+between codebases, files, packages.</p></li>
+</ul>
+<p>Copyright (c) 2016 nexB Inc.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../help.html" class="btn btn-neutral float-right" title="Help" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../aboutcode-toolkit/specification.html" class="btn btn-neutral float-left" title="ABOUT File Specification v3.1.2" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, AyanSinha
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

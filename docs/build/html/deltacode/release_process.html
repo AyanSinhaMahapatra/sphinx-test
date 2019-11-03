@@ -1,0 +1,264 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Release Process &mdash; sphinx-test-1.0 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Google Summer of Code 2019 - Final report" href="gsoc19_final_report.html" />
+    <link rel="prev" title="JSON to CSV Conversion" href="json_to_csv.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> sphinx-test-1.0
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../scancode-workbench/index.html"><strong>Scancode-Workbench Documentation</strong></a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html"><strong>Deltacode Documentation</strong></a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="comprehensive_installation.html">Comprehensive Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deltacode_output.html">Deltacode Output: Format, Fields and Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deltacode_scoring.html">Deltacode Scoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development.html">Development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="json_to_csv.html">JSON to CSV Conversion</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Release Process</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#steps-to-cut-a-new-release">Steps to cut a new release:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gsoc19_final_report.html">Google Summer of Code 2019 - Final report</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../aboutcode-docs/home.html">AboutCode Docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aboutcode-toolkit/index.html"><strong>AboutCode-Toolkit Documentation</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aboutcode-data/abcd.html">AboutCode Data : ABCD</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc_maintenance.html">Document Maintenance</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">sphinx-test-1.0</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html"><strong>Deltacode Documentation</strong></a> &raquo;</li>
+        
+      <li>Release Process</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/deltacode/release_process.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="release-process">
+<h1>Release Process<a class="headerlink" href="#release-process" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="steps-to-cut-a-new-release">
+<h2>Steps to cut a new release:<a class="headerlink" href="#steps-to-cut-a-new-release" title="Permalink to this headline">¶</a></h2>
+<p>run bumpversion with major, minor or patch to bump the version in:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">src</span><span class="o">/</span><span class="n">deltacode</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span>
+<span class="n">setup</span><span class="o">.</span><span class="n">py</span>
+<span class="n">deltacode</span><span class="o">.</span><span class="n">ABOUT</span>
+</pre></div>
+</div>
+<p>Update the CHANGELOG.rst
+commit changes and push changes to develop:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;commit message&quot;</span>
+<span class="n">git</span> <span class="n">push</span> <span class="o">--</span><span class="nb">set</span><span class="o">-</span><span class="n">upstream</span> <span class="n">origin</span> <span class="n">develop</span>
+</pre></div>
+</div>
+<p>merge develop branch in master and tag the release.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">master</span>
+<span class="n">git</span> <span class="n">merge</span> <span class="n">develop</span>
+<span class="n">git</span> <span class="n">tag</span> <span class="o">-</span><span class="n">a</span> <span class="n">v1</span><span class="o">.</span><span class="mf">6.1</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;Release v1.6.1&quot;</span>
+<span class="n">git</span> <span class="n">push</span> <span class="o">--</span><span class="nb">set</span><span class="o">-</span><span class="n">upstream</span> <span class="n">origin</span> <span class="n">master</span>
+<span class="n">git</span> <span class="n">push</span> <span class="o">--</span><span class="nb">set</span><span class="o">-</span><span class="n">upstream</span> <span class="n">origin</span> <span class="n">v1</span><span class="o">.</span><span class="mf">6.1</span>
+</pre></div>
+</div>
+<p>Draft a new release in GitHub, using the previous release blurb as a base. Highlight new and
+noteworthy changes from the CHANGELOG.rst.</p>
+<p>Run etc/release/release.sh locally.</p>
+<p>Upload the release archives created in the dist/ directory to the GitHub release page.</p>
+<p>Save the release as a draft. Use the previous release notes to create notes in the same style.
+Ensure that the link to thirdparty source code is present.</p>
+<p>Test the downloads.</p>
+<p>Publish the release on GitHub</p>
+<p>Then build and publish the released wheel on Pypi. For this you need your own Pypi credentials
+(and get authorized to publish Pypi release: ask &#64;pombredanne) and you need to have the twine
+package installed and configured.</p>
+<p>Build a .whl with <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">bdist_wheel</span></code>
+Run twine with <code class="docutils literal notranslate"><span class="pre">twine</span> <span class="pre">upload</span> <span class="pre">dist/&lt;path</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">built</span> <span class="pre">wheel&gt;</span></code>
+Once uploaded check the published release at <a class="reference external" href="https://pypi.python.org/pypi/deltacode/">https://pypi.python.org/pypi/deltacode/</a>
+Then create a new fresh local virtualenv and test the wheel installation with:
+<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">deltacode</span></code></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="gsoc19_final_report.html" class="btn btn-neutral float-right" title="Google Summer of Code 2019 - Final report" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="json_to_csv.html" class="btn btn-neutral float-left" title="JSON to CSV Conversion" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, AyanSinha
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

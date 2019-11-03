@@ -1,0 +1,586 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Google Season of Docs 2019 &mdash; sphinx-test-1.0 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Google Summer of Code 2017" href="gsoc_2017.html" />
+    <link rel="prev" title="Contributor Project Ideas" href="contributor_project_ideas.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> sphinx-test-1.0
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../scancode-workbench/index.html"><strong>Scancode-Workbench Documentation</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deltacode/index.html"><strong>Deltacode Documentation</strong></a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="home.html">AboutCode Docs</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="contributor_project_ideas.html">Contributor Project Ideas</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Google Season of Docs 2019</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#table-of-contents">Table of Contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#list-of-aboutcode-projects">List of AboutCode projects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#contact">Contact</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#technology">Technology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#technical-writing-skills-needed">Technical Writing Skills Needed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#about-your-project-application">About your project application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#our-documentation-project-ideas">Our Documentation Project ideas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tutorial-ideas">Tutorial ideas</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#scan-a-codebase-and-analyze-the-results"><strong>Scan a Codebase and Analyze the Results</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-ideas">How-To ideas</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#how-to-get-the-license-clarity-score-of-a-package"><strong>How To Get the License Clarity Score of a Package</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#how-to-discover-licensing-issues-in-a-software-project"><strong>How To Discover Licensing Issues in a Software Project</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#reference-ideas">Reference ideas</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#scancode-output-formats"><strong>ScanCode Output Formats</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#discussion-ideas">Discussion ideas</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#integrating-scancode-into-a-software-development-lifecycle"><strong>Integrating ScanCode into a Software Development Lifecycle</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">Your Documentation Project ideas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mentoring">Mentoring</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gsoc_2017.html">Google Summer of Code 2017</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gsoc_2018.html">Google Summer of Code 2018</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gsoc_2019.html">Google Summer of Code 2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="writing_good_commit_messages.html">Writing good Commit Messages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../aboutcode-toolkit/index.html"><strong>AboutCode-Toolkit Documentation</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aboutcode-data/abcd.html">AboutCode Data : ABCD</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc_maintenance.html">Document Maintenance</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">sphinx-test-1.0</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="home.html">AboutCode Docs</a> &raquo;</li>
+        
+      <li>Google Season of Docs 2019</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/aboutcode-docs/gsod_2019.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="google-season-of-docs-2019">
+<span id="gsod2019"></span><h1>Google Season of Docs 2019<a class="headerlink" href="#google-season-of-docs-2019" title="Permalink to this headline">¶</a></h1>
+<p>AboutCode has been accepted as a participant in the Google Season of Documents in 2019 as a
+mentoring org, and is looking for people with technical writing skills. This page contains
+information for technical writers and anyone else interested in helping.</p>
+<p>AboutCode is a family of FOSS projects to uncover data about software code:</p>
+<ul class="simple">
+<li><p>Where does the code come from? which software package?</p></li>
+<li><p>What is its license? copyright?</p></li>
+<li><p>Is the code secure, maintained, well coded?</p></li>
+</ul>
+<p>All these questions are important, and are relevant to millions of free and open source software
+components available on the web for reuse. The answers are critical to ensure that everyone can
+safely consume free and open source software.</p>
+<p><em>Join us to make it so!</em></p>
+<p>Our tools are used to help detect and report the origin and license of source code, packages and
+binaries as well as to discover software and package dependencies, and in the future track security
+vulnerabilities, bugs and other important software package attributes. This is a suite of command
+line tools, web-based and API servers and desktop applications.</p>
+<div class="section" id="table-of-contents">
+<h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="#list-projects-aboutcode"><span class="std std-ref">List of AboutCode projects</span></a></p></li>
+<li><p><a class="reference internal" href="#contact-gsod"><span class="std std-ref">Contact</span></a></p></li>
+<li><p><a class="reference internal" href="#tech-gsod"><span class="std std-ref">Technology</span></a></p></li>
+<li><p><a class="reference internal" href="#writing-skills-gsod"><span class="std std-ref">Technical Writing Skills Needed</span></a></p></li>
+<li><p><a class="reference internal" href="#application-gsod"><span class="std std-ref">About your project application</span></a></p></li>
+<li><p><a class="reference internal" href="#doc-project-ideas-gsod"><span class="std std-ref">Our Documentation Project ideas</span></a></p></li>
+<li><p><a class="reference internal" href="#tutorial-ideas-gsod"><span class="std std-ref">Tutorial ideas</span></a></p>
+<ul>
+<li><p><a class="reference internal" href="#scan-a-codebase-and-analyze-the-results"><span class="std std-ref">Scan a Codebase and Analyze the Results</span></a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#how-to-ideas-gsod"><span class="std std-ref">How-To ideas</span></a></p>
+<ul>
+<li><p><a class="reference internal" href="#how-to-get-the-license-clarity-score-of-a-package"><span class="std std-ref">How To Get the License Clarity Score of a Package</span></a></p></li>
+<li><p><a class="reference internal" href="#how-to-discover-licensing-issues-in-a-software-project"><span class="std std-ref">How To Discover Licensing Issues in a Software Project</span></a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#referance-ideas-gsod"><span class="std std-ref">Reference ideas</span></a></p>
+<ul>
+<li><p><a class="reference internal" href="#scancode-output-formats"><span class="std std-ref">ScanCode Output Formats</span></a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#discussion-ideas-gsod"><span class="std std-ref">Discussion ideas</span></a></p>
+<ul>
+<li><p><a class="reference internal" href="#integrating-scancode-into-a-software-development-lifecycle"><span class="std std-ref">Integrating ScanCode into a Software Development Lifecycle</span></a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#id7"><span class="std std-ref">Your Documentation Project ideas</span></a></p></li>
+<li><p><a class="reference internal" href="#mentoring-gsod"><span class="std std-ref">Mentoring</span></a></p></li>
+</ul>
+</div>
+<div class="section" id="list-of-aboutcode-projects">
+<span id="list-projects-aboutcode"></span><h2>List of AboutCode projects<a class="headerlink" href="#list-of-aboutcode-projects" title="Permalink to this headline">¶</a></h2>
+<p>Note that the AboutCode focus for GSOD 2019 is on <strong>ScanCode Toolkit</strong> and <strong>ScanCode Workbench</strong>,
+although proposals to improve the documents of other AboutCode projects are welcome.</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-toolkit">ScanCode Toolkit</a> is a popular command line tool to
+scan code for licenses, copyrights and packages, used by many organizations and FOSS projects,
+small and large.</p></li>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-workbench">Scancode Workbench</a> (formerly AboutCode Manager)
+is a JavaScript, Electron-based desktop application to review scan results and document your
+origin and license conclusions.</p></li>
+<li><p>Other AboutCode projects are described at <a class="reference external" href="https://www.aboutcode.org">https://www.aboutcode.org</a> and
+<a class="reference external" href="https://github.com/nexB/aboutcode">https://github.com/nexB/aboutcode</a></p>
+<p>We also work closely with, contribute to and have co-started several other orgs and projects:</p>
+</li>
+<li><p><a class="reference external" href="https://github.com/package-url">Package URL</a> is an emerging standard to reference software
+packages of all types with simple, readable and concise URLs.</p></li>
+<li><p><a class="reference external" href="http://SPDX.org">SPDX</a> is the Software Package Data Exchange, a specification to document
+the origin and licensing of software packages.</p></li>
+<li><p><a class="reference external" href="ClearlyDefined.io">ClearlyDefined</a> is a project to review FOSS software and help FOSS projects
+to improve their licensing and documentation clarity.</p></li>
+</ul>
+</div>
+<div class="section" id="contact">
+<span id="contact-gsod"></span><h2>Contact<a class="headerlink" href="#contact" title="Permalink to this headline">¶</a></h2>
+<p>Join the chat online or by IRC at <a class="reference external" href="https://gitter.im/aboutcode-org/discuss">https://gitter.im/aboutcode-org/discuss</a>
+Introduce yourself and start the discussion!</p>
+<p>For personal issues, you can contact the primary org admin directly:
+&#64;pombredanne and <a class="reference external" href="mailto:pombredanne&#37;&#52;&#48;gmail&#46;com">pombredanne<span>&#64;</span>gmail<span>&#46;</span>com</a></p>
+<p>or the GSOD coordinator directly at <a class="reference external" href="mailto:dmclark&#37;&#52;&#48;nexb&#46;com">dmclark<span>&#64;</span>nexb<span>&#46;</span>com</a></p>
+<p>Please ask questions the smart way: <a class="reference external" href="http://www.catb.org/~esr/faqs/smart-questions.html">http://www.catb.org/~esr/faqs/smart-questions.html</a></p>
+</div>
+<div class="section" id="technology">
+<span id="tech-gsod"></span><h2>Technology<a class="headerlink" href="#technology" title="Permalink to this headline">¶</a></h2>
+<p>We primarily use Python (and some C/C++) for code analysis. We use Electron/JavaScript for GUI.</p>
+<p>Our domain includes text analysis and processing (for instance for copyright and license
+detection), parsing (for package manifest formats), binary analysis (to detect the origin and
+license of binaries, which source code they come from, etc.) as well as web based tools and APIs
+(to expose the tools and libraries as web services) and low-level data structures for efficient
+matching (such as Aho-Corasick and other automata).</p>
+<p>Our documentation is provided in text files that support the help function of our command line
+tools. We also have begun to provide documentation in the Wiki section of some AboutCode projects.</p>
+</div>
+<div class="section" id="technical-writing-skills-needed">
+<span id="writing-skills-gsod"></span><h2>Technical Writing Skills Needed<a class="headerlink" href="#technical-writing-skills-needed" title="Permalink to this headline">¶</a></h2>
+<p>Incoming technical writers will need the following skills:</p>
+<ul class="simple">
+<li><p>Ability to install and configure open source code from GitHub.</p></li>
+<li><p>Ability to understand and run programs from the command line in a terminal window.</p></li>
+<li><p>Familiarity with the four document functions described at
+<a class="reference external" href="https://www.divio.com/blog/documentation/">https://www.divio.com/blog/documentation/</a></p></li>
+<li><p>Ability to create and edit wiki pages with multiple markdown languages.</p></li>
+<li><p>An interest in FOSS licensing and software code and origin analysis.</p></li>
+</ul>
+<p>We are happy to help you get up to speed, and the more you are able to demonstrate ability and
+skills in advance, the more likely we are to choose your application!</p>
+</div>
+<div class="section" id="about-your-project-application">
+<span id="application-gsod"></span><h2>About your project application<a class="headerlink" href="#about-your-project-application" title="Permalink to this headline">¶</a></h2>
+<p>Your application should be in the range of 1000 words, and should contain the following
+information, plus anything else that you think is relevant:</p>
+<ul class="simple">
+<li><p>Your name and contact details</p></li>
+<li><p>Title of your proposal</p></li>
+<li><p>Abstract of your proposal</p></li>
+<li><p>Description of your idea including an explanation of what it will contribute to the project,
+such as the software development life cycle requirements that you expect to help with the
+documentation improvements.</p></li>
+<li><p>Description of previous work, existing solutions, open-source projects, preferably with links.</p></li>
+<li><p>Details of your academic studies and any previous internships.</p></li>
+<li><p>Descriptions of your relevant skills.</p></li>
+<li><p>Do you plan to have any other commitments during GSOD that may affect your work? Any
+vacations/holidays? Will you be available full time to work on your project? Please apply
+only if this is a serious full time commitment during the GSOD time frame.</p></li>
+</ul>
+<p>Join the chat online or by IRC at <a class="reference external" href="https://gitter.im/aboutcode-org/discuss">https://gitter.im/aboutcode-org/discuss</a>
+Introduce yourself and start the discussion!</p>
+<p>An excellent, competitive way to demonstrate your capability would be to submit a documentation
+improvement to an AboutCode project, especially to ScanCode Toolkit or ScanCode Workbench.</p>
+<p>You can pick any project idea from the list below. You can also submit
+<a class="reference external" href="#your-documentation-project-ideas">Your Documentation Project ideas</a>.</p>
+</div>
+<div class="section" id="our-documentation-project-ideas">
+<span id="doc-project-ideas-gsod"></span><h2>Our Documentation Project ideas<a class="headerlink" href="#our-documentation-project-ideas" title="Permalink to this headline">¶</a></h2>
+<p>Here is a list of candidate project ideas for your consideration, organized by documentation
+function: <strong>Tutorial</strong> , <strong>How-To</strong> , <strong>Reference</strong> , <strong>Discussion</strong>.</p>
+<p>Note that the AboutCode focus for GSOD 2019 is on ScanCode Toolkit and ScanCode Workbench,
+although proposals to improve the documents of other AboutCode projects are welcome.</p>
+<p><a class="reference external" href="#your-documentation-project-ideas">Your Documentation Project ideas</a> are welcome too! Please
+chat about them to increase your chances of success!</p>
+</div>
+<div class="section" id="tutorial-ideas">
+<span id="tutorial-ideas-gsod"></span><h2>Tutorial ideas<a class="headerlink" href="#tutorial-ideas" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="scan-a-codebase-and-analyze-the-results">
+<span id="id2"></span><h3><strong>Scan a Codebase and Analyze the Results</strong><a class="headerlink" href="#scan-a-codebase-and-analyze-the-results" title="Permalink to this headline">¶</a></h3>
+<p>Provide specific instructions to guide a new user to:</p>
+<ul class="simple">
+<li><p>Scan a somewhat complex sample codebase using scancode-toolkit.</p></li>
+<li><p>Import the results into ScanCode Workbench.</p></li>
+<li><p>Analyze the scan results.</p>
+<ul>
+<li><p><strong>Level</strong></p>
+<ul>
+<li><p>Intermediate</p></li>
+</ul>
+</li>
+<li><p><strong>Tech</strong></p>
+<ul>
+<li><p>Command line processing in a Linux-compatible terminal window</p></li>
+</ul>
+</li>
+<li><p><strong>URLS</strong></p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-toolkit/blob/develop/README.rst">https://github.com/nexB/scancode-toolkit/blob/develop/README.rst</a></p></li>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-toolkit/wiki">https://github.com/nexB/scancode-toolkit/wiki</a></p></li>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-workbench/blob/develop/README.md">https://github.com/nexB/scancode-workbench/blob/develop/README.md</a></p></li>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-workbench/wiki">https://github.com/nexB/scancode-workbench/wiki</a></p></li>
+</ul>
+</li>
+<li><p><strong>Mentors</strong></p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/DennisClark">https://github.com/DennisClark</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="how-to-ideas">
+<span id="how-to-ideas-gsod"></span><h2>How-To ideas<a class="headerlink" href="#how-to-ideas" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="how-to-get-the-license-clarity-score-of-a-package">
+<span id="id3"></span><h3><strong>How To Get the License Clarity Score of a Package</strong><a class="headerlink" href="#how-to-get-the-license-clarity-score-of-a-package" title="Permalink to this headline">¶</a></h3>
+<p>Explain the recommended scancode-toolkit options to get a license clarity score.</p>
+<ul class="simple">
+<li><p><strong>Level</strong></p>
+<ul>
+<li><p>Intermediate</p></li>
+</ul>
+</li>
+<li><p><strong>Tech</strong></p>
+<ul>
+<li><p>Command line processing in a Linux-compatible terminal window</p></li>
+</ul>
+</li>
+<li><p><strong>URLS</strong></p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-toolkit/blob/develop/README.rst">https://github.com/nexB/scancode-toolkit/blob/develop/README.rst</a></p></li>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-toolkit/wiki">https://github.com/nexB/scancode-toolkit/wiki</a></p></li>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-workbench/blob/develop/README.md">https://github.com/nexB/scancode-workbench/blob/develop/README.md</a></p></li>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-workbench/wiki">https://github.com/nexB/scancode-workbench/wiki</a></p></li>
+</ul>
+</li>
+<li><p><strong>Mentors</strong></p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/DennisClark">https://github.com/DennisClark</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="how-to-discover-licensing-issues-in-a-software-project">
+<span id="id4"></span><h3><strong>How To Discover Licensing Issues in a Software Project</strong><a class="headerlink" href="#how-to-discover-licensing-issues-in-a-software-project" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Explain the recommended scancode-toolkit options to discover licenses.</p></li>
+<li><p>Explain how to take advantage of license policy support.</p>
+<ul>
+<li><p><strong>Level</strong></p>
+<ul>
+<li><p>Intermediate</p></li>
+</ul>
+</li>
+<li><p><strong>Tech</strong></p>
+<ul>
+<li><p>Command line processing in a Linux-compatible terminal window</p></li>
+</ul>
+</li>
+<li><p><strong>URLS</strong></p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-toolkit/blob/develop/README.rst">https://github.com/nexB/scancode-toolkit/blob/develop/README.rst</a></p></li>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-toolkit/wiki">https://github.com/nexB/scancode-toolkit/wiki</a></p></li>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-workbench/blob/develop/README.md">https://github.com/nexB/scancode-workbench/blob/develop/README.md</a></p></li>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-workbench/wiki">https://github.com/nexB/scancode-workbench/wiki</a></p></li>
+</ul>
+</li>
+<li><p><strong>Mentors</strong></p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/DennisClark">https://github.com/DennisClark</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="reference-ideas">
+<span id="referance-ideas-gsod"></span><h2>Reference ideas<a class="headerlink" href="#reference-ideas" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="scancode-output-formats">
+<span id="id5"></span><h3><strong>ScanCode Output Formats</strong><a class="headerlink" href="#scancode-output-formats" title="Permalink to this headline">¶</a></h3>
+<p>Explain the various ScanCode output formats and their business purposes.</p>
+<ul class="simple">
+<li><p><strong>Level</strong></p>
+<ul>
+<li><p>Intermediate</p></li>
+</ul>
+</li>
+<li><p><strong>Tech</strong></p>
+<ul>
+<li><p>Command line processing in a Linux-compatible terminal window</p></li>
+</ul>
+</li>
+<li><p><strong>URLS</strong></p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-toolkit/blob/develop/README.rst">https://github.com/nexB/scancode-toolkit/blob/develop/README.rst</a></p></li>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-toolkit/wiki">https://github.com/nexB/scancode-toolkit/wiki</a></p></li>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-workbench/blob/develop/README.md">https://github.com/nexB/scancode-workbench/blob/develop/README.md</a></p></li>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-workbench/wiki">https://github.com/nexB/scancode-workbench/wiki</a></p></li>
+</ul>
+</li>
+<li><p><strong>Mentors</strong></p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/DennisClark">https://github.com/DennisClark</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="discussion-ideas">
+<span id="discussion-ideas-gsod"></span><h2>Discussion ideas<a class="headerlink" href="#discussion-ideas" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="integrating-scancode-into-a-software-development-lifecycle">
+<span id="id6"></span><h3><strong>Integrating ScanCode into a Software Development Lifecycle</strong><a class="headerlink" href="#integrating-scancode-into-a-software-development-lifecycle" title="Permalink to this headline">¶</a></h3>
+<p>Discuss options and techniques to integrate ScanCode into a software development lifecycle
+workflow:</p>
+<ul class="simple">
+<li><p>During software creation and maintenance.</p></li>
+<li><p>During software check-out/check-in.</p></li>
+<li><p>During sofware build and test.</p>
+<ul>
+<li><p><strong>Level</strong></p>
+<ul>
+<li><p>Intermediate</p></li>
+</ul>
+</li>
+<li><p><strong>Tech</strong></p>
+<ul>
+<li><p>Command line processing in a Linux-compatible terminal window</p></li>
+</ul>
+</li>
+<li><p><strong>URLS</strong></p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-toolkit/blob/develop/README.rst">https://github.com/nexB/scancode-toolkit/blob/develop/README.rst</a></p></li>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-toolkit/wiki">https://github.com/nexB/scancode-toolkit/wiki</a></p></li>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-workbench/blob/develop/README.md">https://github.com/nexB/scancode-workbench/blob/develop/README.md</a></p></li>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-workbench/wiki">https://github.com/nexB/scancode-workbench/wiki</a></p></li>
+</ul>
+</li>
+<li><p><strong>Mentors</strong></p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/DennisClark">https://github.com/DennisClark</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id7">
+<span id="id8"></span><h2>Your Documentation Project ideas<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<p>Download and install ScanCode Toolkit and ScanCode Workbench and try them out. For example, you
+may try scanning an open source software package in a technology with which you are familiar.
+What are the documentation weak points?</p>
+<ul class="simple">
+<li><p>Is it difficult to get started? A <strong>Tutorial</strong> document opportunity.</p></li>
+<li><p>Is it difficult to accomplish a specific objective? A <strong>How-To</strong> document opportunity.</p></li>
+<li><p>Are the capabilities of the tool too mysterious? Do you want to know more about what you can do
+with it? A <strong>Reference</strong> document opportunity.</p></li>
+<li><p>Do you feel that you need to understand its concepts better in order to use it and trust it? Do
+you want to know more about how the code scanning actually works? A <strong>Discussion</strong> document
+opportunity.</p></li>
+</ul>
+<p>Feel free to propose and describe your own documentation ideas.</p>
+</div>
+<div class="section" id="mentoring">
+<span id="mentoring-gsod"></span><h2>Mentoring<a class="headerlink" href="#mentoring" title="Permalink to this headline">¶</a></h2>
+<p>We welcome new mentors to help with the program. We require some understanding of the project
+domain to join as a mentor. Contact the team on Gitter at <a class="reference external" href="https://gitter.im/aboutcode-org/discuss">https://gitter.im/aboutcode-org/discuss</a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="gsoc_2017.html" class="btn btn-neutral float-right" title="Google Summer of Code 2017" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="contributor_project_ideas.html" class="btn btn-neutral float-left" title="Contributor Project Ideas" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, AyanSinha
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

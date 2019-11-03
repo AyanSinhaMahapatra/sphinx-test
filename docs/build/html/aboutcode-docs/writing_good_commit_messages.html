@@ -1,0 +1,267 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Writing good Commit Messages &mdash; sphinx-test-1.0 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="AboutCode-Toolkit Documentation" href="../aboutcode-toolkit/index.html" />
+    <link rel="prev" title="Google Summer of Code 2019" href="gsoc_2019.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> sphinx-test-1.0
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../scancode-workbench/index.html"><strong>Scancode-Workbench Documentation</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deltacode/index.html"><strong>Deltacode Documentation</strong></a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="home.html">AboutCode Docs</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="contributor_project_ideas.html">Contributor Project Ideas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gsod_2019.html">Google Season of Docs 2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gsoc_2017.html">Google Summer of Code 2017</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gsoc_2018.html">Google Summer of Code 2018</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gsoc_2019.html">Google Summer of Code 2019</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Writing good Commit Messages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../aboutcode-toolkit/index.html"><strong>AboutCode-Toolkit Documentation</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aboutcode-data/abcd.html">AboutCode Data : ABCD</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc_maintenance.html">Document Maintenance</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">sphinx-test-1.0</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="home.html">AboutCode Docs</a> &raquo;</li>
+        
+      <li>Writing good Commit Messages</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/aboutcode-docs/writing_good_commit_messages.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="writing-good-commit-messages">
+<h1>Writing good Commit Messages<a class="headerlink" href="#writing-good-commit-messages" title="Permalink to this headline">¶</a></h1>
+<p>What is good commit message? We want to avoid this: <a class="reference external" href="https://xkcd.com/1296/">https://xkcd.com/1296/</a></p>
+<p>Read these articles:</p>
+<ul class="simple">
+<li><p>by &#64;cbeams <a class="reference external" href="https://chris.beams.io/posts/git-commit/">How to Write a Git Commit Message</a></p></li>
+<li><p>this README from Linus Torvalds <a class="reference external" href="https://github.com/torvalds/subsurface-for-dirk/blob/0f58510ce0244513521296b75281fcc32f72a931/README#L73">https://github.com/torvalds/subsurface-for-dirk/blob/0f58510ce0244513521296b75281fcc32f72a931/README#L73</a></p></li>
+<li><p>from the Git book: <a class="reference external" href="https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project">https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project</a></p></li>
+</ul>
+<p>The main style points are these:</p>
+<p>Subject:</p>
+<ul class="simple">
+<li><p>Add a issue number at the end of the line when available as in “#234”</p></li>
+<li><p>Limit the subject line to 50 characters</p></li>
+<li><p>Capitalize the subject line</p></li>
+<li><p>Do not end the subject line with a period</p></li>
+<li><p>Use the imperative mood in the subject line: you are giving orders to the codebase</p></li>
+</ul>
+<p>Body:</p>
+<ul class="simple">
+<li><p>Separate subject from body with a blank line</p></li>
+<li><p>Wrap the body at 72 characters. Use only spaces for formatting, not tabs.</p></li>
+<li><p>Use the body to explain what and why vs. how</p></li>
+<li><p>use bullets with a * if needed</p></li>
+<li><p>Add a Reported-by: if needed</p></li>
+<li><p>End your message with a Signed-off-by: prefixed by a blank line</p></li>
+</ul>
+<p>Other comments:</p>
+<p>We like to suffix the subject line with an issue number. If this was a trivial change it may not
+have one though. If it had one a you would use <code class="docutils literal notranslate"><span class="pre">#156</span></code> as a suffix to the first line.</p>
+<p>We like to tell why the commit is there and use an imperative style, like if you were giving an
+order to the codebase with your commit:</p>
+<p>e.g rather than : <code class="docutils literal notranslate"><span class="pre">Minor</span> <span class="pre">fix</span> <span class="pre">for</span> <span class="pre">unnecessary</span> <span class="pre">operations.</span></code>
+may be <code class="docutils literal notranslate"><span class="pre">Remove</span> <span class="pre">unnecessary</span> <span class="pre">operations</span> <span class="pre">#123</span></code>
+or:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Remove</span> <span class="n">unnecessary</span> <span class="n">operations</span> <span class="c1">#123</span>
+
+    <span class="o">*</span> <span class="n">If</span> <span class="n">the</span> <span class="n">ts</span> <span class="n">timestamp</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">exist</span><span class="p">,</span> <span class="n">do</span> <span class="ow">not</span> <span class="n">compare</span> <span class="k">with</span> <span class="n">old</span> <span class="n">one</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>You need to add a signoff to your commit. So the final message would have looked like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Remove</span> <span class="n">unnecessary</span> <span class="n">operations</span> <span class="c1">#123</span>
+
+    <span class="o">*</span> <span class="n">If</span> <span class="n">the</span> <span class="n">ts</span> <span class="n">timestamp</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">exist</span><span class="p">,</span> <span class="n">do</span> <span class="ow">not</span> <span class="n">compare</span> <span class="k">with</span> <span class="n">old</span> <span class="n">one</span><span class="o">.</span>
+
+<span class="n">Signed</span><span class="o">-</span><span class="n">off</span><span class="o">-</span><span class="n">by</span><span class="p">:</span> <span class="n">Philippe</span> <span class="n">Ombredanne</span> <span class="o">&lt;</span><span class="n">pombredanne</span><span class="nd">@nexb</span><span class="o">.</span><span class="n">com</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../aboutcode-toolkit/index.html" class="btn btn-neutral float-right" title="AboutCode-Toolkit Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="gsoc_2019.html" class="btn btn-neutral float-left" title="Google Summer of Code 2019" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, AyanSinha
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

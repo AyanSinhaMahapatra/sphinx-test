@@ -1,0 +1,375 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Deltacode Scoring &mdash; sphinx-test-1.0 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Development" href="development.html" />
+    <link rel="prev" title="Deltacode Output: Format, Fields and Structure" href="deltacode_output.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> sphinx-test-1.0
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../scancode-workbench/index.html"><strong>Scancode-Workbench Documentation</strong></a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html"><strong>Deltacode Documentation</strong></a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="comprehensive_installation.html">Comprehensive Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deltacode_output.html">Deltacode Output: Format, Fields and Structure</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Deltacode Scoring</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#delta-objects">Delta Objects</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#a-file-level-comparison-of-two-codebases">A File-Level Comparison of Two Codebases</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#basic-scoring">Basic Scoring</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#delta-object-fields-and-values">Delta Object Fields and Values</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#license-additions-and-changes">License Additions and Changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#copyright-holder-additions-and-changes">Copyright Holder Additions and Changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#moved-removed-and-unmodified">Moved, Removed and Unmodified</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="development.html">Development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="json_to_csv.html">JSON to CSV Conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_process.html">Release Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gsoc19_final_report.html">Google Summer of Code 2019 - Final report</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../aboutcode-docs/home.html">AboutCode Docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aboutcode-toolkit/index.html"><strong>AboutCode-Toolkit Documentation</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aboutcode-data/abcd.html">AboutCode Data : ABCD</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc_maintenance.html">Document Maintenance</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">sphinx-test-1.0</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html"><strong>Deltacode Documentation</strong></a> &raquo;</li>
+        
+      <li>Deltacode Scoring</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/deltacode/deltacode_scoring.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="deltacode-scoring">
+<span id="id1"></span><h1>Deltacode Scoring<a class="headerlink" href="#deltacode-scoring" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="delta-objects">
+<h2>Delta Objects<a class="headerlink" href="#delta-objects" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="a-file-level-comparison-of-two-codebases">
+<h3>A File-Level Comparison of Two Codebases<a class="headerlink" href="#a-file-level-comparison-of-two-codebases" title="Permalink to this headline">¶</a></h3>
+<p>A Delta object represents the file-level comparison (i.e., the “delta”) of two codebases, typically
+two versions of the same codebase, using ScanCode-generated <code class="docutils literal notranslate"><span class="pre">JSON</span></code> output files as input for the
+comparison process.</p>
+<p>Based on how the user constructs the command-line input, DeltaCode’s naming convention treats one
+codebase as the “new” codebase and the other as the “old” codebase::</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">deltacode</span> <span class="o">-</span><span class="n">n</span> <span class="p">[</span><span class="n">path</span> <span class="n">to</span> <span class="n">the</span> <span class="s1">&#39;new&#39;</span> <span class="n">codebase</span><span class="p">]</span> <span class="o">-</span><span class="n">o</span> <span class="p">[</span><span class="n">path</span> <span class="n">to</span> <span class="n">the</span> <span class="s1">&#39;old&#39;</span> <span class="n">codebase</span><span class="p">]</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="basic-scoring">
+<span id="id2"></span><h3>Basic Scoring<a class="headerlink" href="#basic-scoring" title="Permalink to this headline">¶</a></h3>
+<p>A DeltaCode codebase comparison produces a collection of file-level Delta objects. Depending on
+the nature of the file-level change between the two codebases, each Delta object is characterized
+as belonging to one of the categories listed below. Each category has an associated score intended
+to convey its potential importance – from a license/copyright compliance perspective – to a
+user’s analysis of the changes between the <code class="docutils literal notranslate"><span class="pre">new</span></code> and <code class="docutils literal notranslate"><span class="pre">old</span></code> codebases.</p>
+<p>In descending order of importance, the categories are:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">added</span></code>: A file has been added to the <code class="docutils literal notranslate"><span class="pre">new</span></code> codebase.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">modified</span></code>: The file is contained in both the <code class="docutils literal notranslate"><span class="pre">new</span></code> and <code class="docutils literal notranslate"><span class="pre">old</span></code> codebase and has been
+modified (as reflected, among other things, by a change in the file’s <code class="docutils literal notranslate"><span class="pre">sha1</span></code> attribute).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">moved</span></code>: The file is contained in both the <code class="docutils literal notranslate"><span class="pre">new</span></code> and <code class="docutils literal notranslate"><span class="pre">old</span></code> codebase and has been moved but
+not modified.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">removed</span></code>: A file has been removed from the <code class="docutils literal notranslate"><span class="pre">old</span></code> codebase.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unmodified</span></code>: The file is contained in both the <code class="docutils literal notranslate"><span class="pre">new</span></code> and <code class="docutils literal notranslate"><span class="pre">old</span></code> codebase and has not been
+modified or moved.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Files are determined to be Moved by looping thru the <cite>added</cite> and <cite>removed</cite> Delta objects and
+checking their sha1 values.</p>
+</div>
+<p>The score of a Delta object characterized as <code class="docutils literal notranslate"><span class="pre">added</span></code> or <code class="docutils literal notranslate"><span class="pre">modified</span></code> may be increased based on
+the detection of license- and/or copyright-related changes. See
+<a class="reference internal" href="#license-additions-and-changes"><span class="std std-ref">License Additions and Changes</span></a> and <a class="reference internal" href="#copyright-holder-additions-and-changes"><span class="std std-ref">Copyright Holder Additions and Changes</span></a> below.</p>
+</div>
+<div class="section" id="delta-object-fields-and-values">
+<h3>Delta Object Fields and Values<a class="headerlink" href="#delta-object-fields-and-values" title="Permalink to this headline">¶</a></h3>
+<p>Each Delta object includes the following fields and values:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">factors</span></code>: One or more strings representing the factors that characterize the file-level
+comparison and resulting score, e.g., in JSON format::</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;factors&quot;</span><span class="p">:</span> <span class="p">[</span>
+  <span class="s2">&quot;added&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;license info added&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;copyright info added&quot;</span>
+<span class="p">],</span>
+</pre></div>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">score</span></code>: A number representing the magnitude/importance of the file-level change – the
+higher the score, the greater the change.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">new</span></code>: The ScanCode-based file attributes (<code class="docutils literal notranslate"><span class="pre">path</span></code>, <code class="docutils literal notranslate"><span class="pre">licenses</span></code>, <code class="docutils literal notranslate"><span class="pre">copyrights</span></code> etc.)
+for the file in the codebase designated by the user as <code class="docutils literal notranslate"><span class="pre">new</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">old</span></code>: The ScanCode-based file attributes for the file in the codebase designated by the user
+as <code class="docutils literal notranslate"><span class="pre">old</span></code>.</p></li>
+</ul>
+<p>Note that an <code class="docutils literal notranslate"><span class="pre">added</span></code> Delta object will have a <code class="docutils literal notranslate"><span class="pre">new</span></code> file but no <code class="docutils literal notranslate"><span class="pre">old</span></code> file, while a
+<code class="docutils literal notranslate"><span class="pre">removed</span></code> Delta object will have an <code class="docutils literal notranslate"><span class="pre">old</span></code> file but not a <code class="docutils literal notranslate"><span class="pre">new</span></code> file. In each case, the
+<code class="docutils literal notranslate"><span class="pre">new</span></code> and <code class="docutils literal notranslate"><span class="pre">old</span></code> keys will be present but the value for the missing file will be <code class="docutils literal notranslate"><span class="pre">null</span></code>.</p>
+</div>
+</div>
+<div class="section" id="license-additions-and-changes">
+<span id="id3"></span><h2>License Additions and Changes<a class="headerlink" href="#license-additions-and-changes" title="Permalink to this headline">¶</a></h2>
+<p>Certain file-level changes involving the license-related information in a Delta object will
+increase the object’s score.</p>
+<ul>
+<li><p>An <code class="docutils literal notranslate"><span class="pre">added</span></code> Delta object’s score will be increased:</p>
+<blockquote>
+<div><ul>
+<li><p>If the <code class="docutils literal notranslate"><span class="pre">new</span></code> file contains one or more licenses (<code class="docutils literal notranslate"><span class="pre">factors</span></code> will include
+<code class="docutils literal notranslate"><span class="pre">license</span> <span class="pre">info</span> <span class="pre">added</span></code>).</p></li>
+<li><p>If the the <code class="docutils literal notranslate"><span class="pre">new</span></code> file contains any of the following Commercial/Copyleft license
+categories (<code class="docutils literal notranslate"><span class="pre">factors</span></code> will include, e.g., <code class="docutils literal notranslate"><span class="pre">copyleft</span></code> added):</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>‘Commercial’</p></li>
+<li><p>‘Copyleft’</p></li>
+<li><p>‘Copyleft Limited’</p></li>
+<li><p>‘Free Restricted’</p></li>
+<li><p>‘Patent License’</p></li>
+<li><p>‘Proprietary Free’</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>A <code class="docutils literal notranslate"><span class="pre">modified</span></code> Delta object’s score will be increased:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>If the <code class="docutils literal notranslate"><span class="pre">old</span></code> file has at least one license and the <code class="docutils literal notranslate"><span class="pre">new</span></code> file has no licenses
+(<code class="docutils literal notranslate"><span class="pre">factors</span></code> will include <code class="docutils literal notranslate"><span class="pre">license</span> <span class="pre">info</span> <span class="pre">removed</span></code>).</p></li>
+<li><p>If the <code class="docutils literal notranslate"><span class="pre">old</span></code> file has no licenses and the <code class="docutils literal notranslate"><span class="pre">new</span></code> file has at least one license
+(<code class="docutils literal notranslate"><span class="pre">factors</span></code> will include <code class="docutils literal notranslate"><span class="pre">license</span> <span class="pre">info</span> <span class="pre">added</span></code>).</p></li>
+<li><p>If both the <code class="docutils literal notranslate"><span class="pre">old</span></code> file and <code class="docutils literal notranslate"><span class="pre">new</span></code> file have at least one license and the license
+keys are not identical (e.g., the <code class="docutils literal notranslate"><span class="pre">old</span></code> file includes an <code class="docutils literal notranslate"><span class="pre">mit</span></code> license and an
+<code class="docutils literal notranslate"><span class="pre">apache-2.0</span></code> license and the <code class="docutils literal notranslate"><span class="pre">new</span></code> file includes only an <code class="docutils literal notranslate"><span class="pre">mit</span></code> license)
+(<code class="docutils literal notranslate"><span class="pre">factors</span></code> will include <code class="docutils literal notranslate"><span class="pre">license</span></code> change).</p></li>
+<li><p>If any of the Commercial/Copyleft license categories listed above are found in the
+<code class="docutils literal notranslate"><span class="pre">new</span></code> file but not in the <code class="docutils literal notranslate"><span class="pre">old</span></code> file (<code class="docutils literal notranslate"><span class="pre">factors</span></code> will include, e.g.,
+<code class="docutils literal notranslate"><span class="pre">proprietary</span> <span class="pre">free</span> <span class="pre">added</span></code>).</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="copyright-holder-additions-and-changes">
+<span id="id4"></span><h2>Copyright Holder Additions and Changes<a class="headerlink" href="#copyright-holder-additions-and-changes" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>An <code class="docutils literal notranslate"><span class="pre">added</span></code> Delta object’s score will be increased if the <code class="docutils literal notranslate"><span class="pre">new</span></code> file contains one or more
+copyright <code class="docutils literal notranslate"><span class="pre">holders</span></code> (<code class="docutils literal notranslate"><span class="pre">factors</span></code> will include <code class="docutils literal notranslate"><span class="pre">copyright</span> <span class="pre">info</span> <span class="pre">added</span></code>).</p></li>
+<li><p>A <code class="docutils literal notranslate"><span class="pre">modified</span></code> Delta object’s score will be increased:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>If the <code class="docutils literal notranslate"><span class="pre">old</span></code> file has at least one copyright <code class="docutils literal notranslate"><span class="pre">holder</span></code> and the <code class="docutils literal notranslate"><span class="pre">new</span></code> file has no
+copyright holders (<code class="docutils literal notranslate"><span class="pre">factors</span></code> will include <code class="docutils literal notranslate"><span class="pre">copyright</span> <span class="pre">info</span> <span class="pre">removed</span></code>).</p></li>
+<li><p>If the <code class="docutils literal notranslate"><span class="pre">old</span></code> file has no copyright <code class="docutils literal notranslate"><span class="pre">holders</span></code> and the <code class="docutils literal notranslate"><span class="pre">new</span></code> file has at least one
+(<code class="docutils literal notranslate"><span class="pre">actors</span></code> will include <code class="docutils literal notranslate"><span class="pre">copyright</span> <span class="pre">info</span> <span class="pre">added</span></code>).</p></li>
+<li><p>If both the <code class="docutils literal notranslate"><span class="pre">old</span></code> file and <code class="docutils literal notranslate"><span class="pre">new</span></code> file have at least one copyright <code class="docutils literal notranslate"><span class="pre">holder</span></code> and
+the <code class="docutils literal notranslate"><span class="pre">holders</span></code> are not identical (<code class="docutils literal notranslate"><span class="pre">factors</span></code> will include <code class="docutils literal notranslate"><span class="pre">copyright</span></code> change).</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="moved-removed-and-unmodified">
+<h2>Moved, Removed and Unmodified<a class="headerlink" href="#moved-removed-and-unmodified" title="Permalink to this headline">¶</a></h2>
+<p>As noted above in Basic Scoring <a class="reference internal" href="#basic-scoring"><span class="std std-ref">Basic Scoring</span></a>, from a license/copyright compliance
+perspective, the three least significant Delta categories are <code class="docutils literal notranslate"><span class="pre">moved</span></code>, <code class="docutils literal notranslate"><span class="pre">removed</span></code> and
+<code class="docutils literal notranslate"><span class="pre">unmodified</span></code>.</p>
+<p>In the current version of DeltaCode, each of these three categories is assigned a score of 0, with
+no options to increase that score depending on the content of the Delta object.</p>
+<p>However, it is possible that both <code class="docutils literal notranslate"><span class="pre">moved</span></code> and <code class="docutils literal notranslate"><span class="pre">removed</span></code> will be assigned some non-zero score in
+a future version. In particular, <code class="docutils literal notranslate"><span class="pre">removed</span></code> could be significant from a compliance viewpoint
+where, for example, the removal of a file results in the removal of a Commercial/Copyleft license
+obligation.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="development.html" class="btn btn-neutral float-right" title="Development" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="deltacode_output.html" class="btn btn-neutral float-left" title="Deltacode Output: Format, Fields and Structure" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, AyanSinha
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
