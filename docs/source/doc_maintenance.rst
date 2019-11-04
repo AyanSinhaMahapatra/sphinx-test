@@ -102,6 +102,8 @@ examples::
 The AboutCode webhook with ReadTheDocs should rebuild the documentation. You can review your
 results online.
 
+.. _doc_style_guide:
+
 Documentation Style Guides
 --------------------------
 
