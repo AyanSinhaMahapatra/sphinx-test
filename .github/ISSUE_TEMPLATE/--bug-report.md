@@ -8,42 +8,40 @@ assignees: ''
 ---
 
 <!-- 
-Please fill out as much of the below template as you can.
-Consider providing any applicable: code, screenshots, or gifs.
+Please fill out as much of the below template and delete unnecessary text.
+Sample Bug Report - https://github.com/nexB/scancode-toolkit/issues/1778
+Markdown Styling - https://commonmark.org/help/
 -->
 
-### Please describe the problem (or idea)
+### Description
 
-> What happened just before the problem occurred? Or what problem could this idea solve?
-
-
-
-> What did you expect to see that you didn't?
+> Please leave a brief description of the bug or feature request:
 
 
+### How To Reproduce
 
-### Please show us where to look
+> Tell us how to reproduce the issue. 
 
-https://publiclab.org/ ...
+<!-- Exact Commands -->
 
+### Select Category
+<!-- Which of this label correctly describe your Bug Report -->
 
-### What's your PublicLab.org username?
+-  Installation Fails []
+-  Scan Fails []
+-  License/Copyright not Detected []
+-  Output Fails []
+-  Documentation Bug []
+-  Other []
 
-> This can help us diagnose the issue: 
+### System configuration
 
+> For bug reports, it really helps us to know:
 
+* What OS are you running on? (Windows/MacOS/Linux)
+* What version of scancode-toolkit was used to generate the scan file?
+* What installation method was used to install/run scancode? (pip/source download/other)
 
-### Browser, version, and operating system
-
-> Many bugs are related to these -- please help us track it down and reproduce what you're seeing!
-
-
-****
-
-## Thank you!
-
-Your help makes Public Lab better! We *deeply* appreciate your helping refine and improve this site. 
-
-To learn how to write really great issues, which increases the chances they'll be resolved, see:
-
-https://publiclab.org/wiki/developers#Contributing+for+non-coders
+<!-- 
+Your help makes ScanCode Toolkit better! We *deeply* appreciate your help in improving ScanCode Toolkit.
+-->
